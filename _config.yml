@@ -295,6 +295,9 @@ scholar:
   # See https://github.com/alshedivat/al-folio/issues/357.
   bibtex_filters: [latex, smallcaps, superscript]
 
+  sort_by: year, month  # 先按年份排，年份一样按月份排
+  order: descending     # 倒序（最新的在最上面）
+
   replace_strings: true
   join_strings: true
 
