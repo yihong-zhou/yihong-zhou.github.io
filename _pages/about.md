@@ -27,4 +27,13 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
+I am a **Postdoctoral Researcher** at the [University of Oxford](http://www.ox.ac.uk/), working on the **SAGEflex** project (Safeguarded AI Agents for Grid-Edge Flexibility), funded by ARIA. 
+
+Previously, I completed my **PhD** at the **The University of Edinburgh** (2021--2025), supervised by Prof. Thomas Morstyn, Prof. Gareth Harrison, and Dr. Wei Sun. My thesis focused on "Unlocking Grid Flexibility of Distributed Energy Resources". I was also a Visiting PhD Student at Oxford from 2024 to 2025.
+
 My research has focused on developing scalable and safe decision-making methods for power system operation, including probabilistic safety guarantees via chance constraints and robustness to distribution shifts, at the intersection of optimisation and AI. I am also interested in understanding the value of emerging resources (such as data centres) within power systems, as well as their broader policy and societal impacts, including effects on fuel poverty.
+
+### Education
+*   **PhD**, University of Edinburgh, 2025
+*   **MSc**, University of Edinburgh (Distinction), 2021
+*   **BEng**, North China Electric Power University, 2020

@@ -1,15 +1,20 @@
 ---
 layout: page
+title: Teaching
 permalink: /teaching/
-title: teaching
-description: Course materials, schedules, and resources for classes taught.
+description: Teaching assistantships and supervision.
 nav: true
-nav_order: 6
-calendar: true
+nav_order: 3
 ---
 
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
+### University of Oxford
+*   **Co-supervision**: Currently co-supervising 3 DPhil students and 5 MSc/Undergrad theses.
+*   **Lab Service**: Server and Code-space Manager for the Power System Architecture Lab.
 
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
-
-{% include courses.liquid %}
+### The University of Edinburgh
+**Teaching Assistant** (01/2022--05/2023)
+*   Courses: 
+    *   (1) Data Analysis and Machine Learning
+    *   (2) Distributed Energy Resources and Smart Grids.
+*   **Role**: Lab demonstrator and marker throughout the courses.
+*   **Award Nomination**: EUSA Teaching Award Nomination (2023) for "Outstanding Course".
