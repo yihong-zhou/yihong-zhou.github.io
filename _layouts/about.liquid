@@ -32,9 +32,28 @@ layout: default
             cache_bust=true
           %}
         {% endif %}
+        
+        <!-- 地址信息 -->
+        {% if page.profile.address %}
+        <div class="address">
+          {{ page.profile.address }}
+        </div>
+        {% endif %}
+
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
+
+        <!-- 社交图标 -->
+        <div class="social">
+            <div class="contact-icons">{% social_links %}</div>
+            
+            <!-- [修改] Contact Note 加在图标正下方 -->
+            <div class="contact-note" style="margin-top: 10px; font-size: 0.9em;">
+              {{ site.contact_note }}
+            </div>
+        </div>
+
       </div>
     {% endif %}
 
@@ -62,15 +81,6 @@ layout: default
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
       </h2>
       {% include selected_papers.liquid %}
-    {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
     {% endif %}
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
