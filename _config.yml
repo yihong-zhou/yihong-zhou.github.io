@@ -2,10 +2,10 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: Dr. Yihong Zhou (周羿宏) # the website title (if blank, full name will be used instead)
 first_name: Dr. Yihong
 middle_name: 
-last_name: Zhou
+last_name: Zhou (周羿宏)
 contact_note: >
   Feel free to reach out via email for any inquiries or collaborations.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
