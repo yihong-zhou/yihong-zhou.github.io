@@ -7,6 +7,7 @@ scholar_userid: cY3c6eUAAAAJ
 linkedin_username: yihong-zhou-21828b202
 github_username: yihong-zhou
 orcid_id: 0000-0002-5015-8661
+research_gate_profile: Yihong-Zhou-3  # 替换为你的 ResearchGate 个人资料名称
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 # custom_social: # can be any name here other than the ones already defined in the jekyll-socials plugin
