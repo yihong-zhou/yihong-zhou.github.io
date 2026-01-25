@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: <a href='https://www.ox.ac.uk/'>University of Oxford</a>. Oxford, UK. # Contacts. Motto. Etc.
 
