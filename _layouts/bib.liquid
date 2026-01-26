@@ -370,11 +370,15 @@
     {% endif %}
 
     {% if entry.abstract %}
-      <!-- Hidden abstract block -->
-      <div class="abstract hidden">
+      {% assign abstract_classes = "abstract hidden" %}
+      {% if page.layout == 'about' %}
+        {% assign abstract_classes = abstract_classes | append: " open" %}
+      {% endif %}
+      <div class="{{ abstract_classes }}">
         <p>{{ entry.abstract }}</p>
       </div>
     {% endif %}
+
 
     {% if entry.bibtex_show %}
       <!-- Hidden bibtex block -->
