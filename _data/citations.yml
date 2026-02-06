@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-01-30'
+  last_updated: '2026-02-06'
 papers:
   cY3c6eUAAAAJ:0EnyYjriUFMC:
     citations: 1
@@ -9,6 +9,10 @@ papers:
     citations: 77
     title: Robust load forecasting towards adversarial attacks via bayesian learning
     year: '2022'
+  cY3c6eUAAAAJ:3fE2CSJIrl8C:
+    citations: 0
+    title: 'Multiscale Grid Intelligence to Fight Artificial Intelligence Data Center Grid Defection: Unlocking a Faster, Cheaper, and Cleaner On-Grid AI Rollout'
+    year: '2026'
   cY3c6eUAAAAJ:5nxA0vEk-isC:
     citations: 0
     title: Decision-focused Learning for Local Energy Communities Management Under Uncertainty
@@ -26,7 +30,7 @@ papers:
     title: Evaluating the social benefits and network costs of heat pumps as an energy crisis intervention
     year: '2024'
   cY3c6eUAAAAJ:LkGwnXOMwfcC:
-    citations: 6
+    citations: 7
     title: AI-focused HPC data centers can provide more power grid flexibility and at lower cost
     year: '2024'
   cY3c6eUAAAAJ:MXK_kJrjxJIC:
@@ -50,7 +54,7 @@ papers:
     title: Assessment of options for a smart, resilient and low-carbon multi-vector energy system in the Scottish Borders
     year: '2023'
   cY3c6eUAAAAJ:_FxGoFyzp5QC:
-    citations: 3
+    citations: 5
     title: Evaluating and Comparing the Potentials in Primary Response for GPU and CPU Data Centers
     year: '2024'
   cY3c6eUAAAAJ:d1gkVwhDpl0C:
