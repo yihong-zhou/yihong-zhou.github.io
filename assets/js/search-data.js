@@ -398,19 +398,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_template/";
             },},{id: "news-i-created-my-first-personal-website",
           title: 'I created my first personal website!',
           description: "",
           section: "News",},{id: "news-we-have-two-papers-accepted-for-power-systems-computation-conference-pscc-2026-see-you-in-limassol-cyprus",
           title: 'We have two papers accepted for (Power Systems Computation Conference) PSCC 2026! See...',
           description: "",
-          section: "News",},{id: "news-our-paper-independent-aggregators-securing-end-user-wasserstein-distributionally-robust-flexibility-through-bilevel-incentives-is-accepted-by-applied-energy",
-          title: 'Our paper “Independent Aggregators securing End User Wasserstein Distributionally Robust Flexibility through Bilevel...',
+          section: "News",},{id: "news-our-paper-independent-aggregators-securing-end-user-wasserstein-distributionally-robust-flexibility-through-bilevel-incentives-has-been-published-by-applied-energy-it-is-now-available-online-at-sciencedirect-https-www-sciencedirect-com-science-article-pii-s0306261926001364",
+          title: 'Our paper “Independent Aggregators Securing End-User Wasserstein Distributionally Robust Flexibility through Bilevel Incentives”...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
