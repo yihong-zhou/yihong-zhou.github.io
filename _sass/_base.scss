@@ -753,8 +753,24 @@ footer.sticky-bottom {
 
     li {
       margin-bottom: 1rem;
+      padding: 1rem 1rem 0.85rem;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 14px;
+      background-color: var(--global-card-bg-color);
+      box-shadow: 0 10px 24px rgba(8, 36, 64, 0.06);
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 30px rgba(8, 36, 64, 0.1);
+        border-color: rgba(13, 59, 102, 0.2);
+      }
 
       .preview {
+        border: 1px solid rgba(13, 59, 102, 0.12);
       }
 
       .abbr {
@@ -783,6 +799,12 @@ footer.sticky-bottom {
 
       .title {
         font-weight: bolder;
+        font-size: 1.05rem;
+        line-height: 1.35;
+      }
+
+      .periodical {
+        color: var(--global-text-color-light);
       }
 
       .author {
@@ -813,6 +835,8 @@ footer.sticky-bottom {
       }
 
       .links {
+        margin-top: 0.65rem;
+
         a.btn {
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
@@ -1530,4 +1554,176 @@ figure.cover {
 
 mjx-container[jax="CHTML"][display="true"] {
   overflow-x: auto;
+}
+
+/*******************************************************************************
+ * Professional polish
+ ******************************************************************************/
+
+body {
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  letter-spacing: 0.01em;
+  background:
+    radial-gradient(circle at 15% 8%, rgba(27, 127, 135, 0.1), transparent 28%),
+    radial-gradient(circle at 82% 0%, rgba(13, 59, 102, 0.12), transparent 36%),
+    var(--global-bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.post-title {
+  font-family: "Merriweather", Georgia, serif;
+  letter-spacing: 0.01em;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+}
+
+a,
+table.table a {
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1.5px;
+}
+
+.container[role="main"] {
+  animation: page-fade-in 0.45s ease-out;
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-bottom: 1px solid rgba(13, 59, 102, 0.14);
+}
+
+.post .desc {
+  color: var(--global-text-color-light);
+  font-size: 1.02rem;
+}
+
+.section-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section-link:hover {
+  color: var(--global-theme-color);
+}
+
+.profile img {
+  border-radius: 14px;
+  border: 1px solid rgba(13, 59, 102, 0.18);
+  box-shadow: 0 14px 28px rgba(8, 36, 64, 0.15);
+}
+
+.post h2 {
+  margin-top: 2rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.news .table {
+  margin-bottom: 0;
+}
+
+.profile-contact-note {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.news .table th,
+.news .table td {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.news .table th {
+  color: var(--global-text-color-light);
+  font-weight: 600;
+}
+
+.news .table td {
+  border-top-color: rgba(13, 59, 102, 0.08);
+}
+
+a.btn,
+.publications ol.bibliography li .links a.btn,
+#search-modal a.btn {
+  border-radius: 999px;
+  border-width: 1px;
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+a.btn:hover,
+.publications ol.bibliography li .links a.btn:hover,
+#search-modal a.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(8, 36, 64, 0.14);
+}
+
+.year {
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--global-theme-color);
+}
+
+.talk-entry {
+  margin-bottom: 1.25rem;
+  padding: 1rem 0.2rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.talk-entry .col-sm-4 img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.talk-entry h5 {
+  margin-bottom: 0.65rem;
+}
+
+.talk-meta {
+  font-size: 0.94rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.55rem;
+}
+
+.talk-links {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+  .talk-entry {
+    padding: 0.6rem 0;
+  }
+
+  .talk-entry .col-sm-4 {
+    margin-bottom: 0.85rem;
+  }
 }

@@ -218,3 +218,58 @@ ul.timeline li::before {
      color: var(--global-text-color);
 }
 */
+
+/*****************************
+ * CV page polish
+ *****************************/
+
+.cv-page-shell {
+  margin-top: 0.8rem;
+}
+
+.cv-page-toolbar {
+  margin-bottom: 0.85rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.cv-page-embed {
+  width: 100%;
+  min-height: 980px;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  background-color: var(--global-card-bg-color);
+}
+
+.cv {
+  .card {
+    border-radius: 14px;
+    border: 1px solid var(--global-divider-color);
+    box-shadow: 0 8px 20px rgba(8, 36, 64, 0.05);
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+    color: var(--global-theme-color);
+  }
+
+  .list-group-item {
+    border-color: rgba(13, 59, 102, 0.08);
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+  }
+
+  .badge.danger-color-dark {
+    background-color: var(--global-theme-color) !important;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-page-embed {
+    min-height: 640px;
+  }
+}
