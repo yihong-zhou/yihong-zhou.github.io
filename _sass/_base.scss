@@ -1755,6 +1755,28 @@ a.btn:hover,
   font-size: 1.02rem;
 }
 
+.collab-intro-card {
+  margin: 0 0 1.2rem;
+  padding: 0.95rem 1rem 0.9rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  background-color: var(--global-card-bg-color);
+}
+
+.collab-intro-card p {
+  margin-bottom: 0.55rem;
+}
+
+.collab-intro-links {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.collab-intro-links .btn {
+  margin-top: 0.15rem;
+}
+
 .position-separator {
   color: var(--global-text-color-light);
   margin: 0 0.4rem;
@@ -1814,6 +1836,7 @@ a.btn:hover,
 
 @media (min-width: 768px) {
   .position-card,
+  .collab-intro-card,
   .education-timeline {
     max-width: 68%;
   }

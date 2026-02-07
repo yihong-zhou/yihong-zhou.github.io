@@ -36,6 +36,19 @@ latest_posts:
   </p>
 </div>
 
+<div class="collab-intro-card">
+  <p>
+    I build <strong>safe and scalable AI methods for grid-edge flexibility</strong>, with a focus on uncertainty-aware optimization and market-compatible deployment.
+  </p>
+  <p>
+    I am open to collaborations with universities, system operators, utilities, aggregators, and AI infrastructure teams.
+  </p>
+  <div class="collab-intro-links">
+    <a href="/collaboration/" class="btn btn-sm z-depth-0" role="button">Collaborate</a>
+    <a href="mailto:yihong.zhou@eng.ox.ac.uk" class="btn btn-sm z-depth-0" role="button">Email</a>
+  </div>
+</div>
+
 I completed my **PhD** at the **University of Edinburgh** (2021--2025), supervised by Prof. Thomas Morstyn, Prof. Gareth Harrison, and Dr. Wei Sun. My thesis focused on *Unlocking Grid Flexibility of Distributed Energy Resources*. I was also a Visiting PhD Student at Oxford from 2024 to 2025.
 
 My research focuses on scalable and reliable decision-making methods for power system operation, including probabilistic safety guarantees through chance constraints and robust optimization under distribution shift, at the intersection of optimization and AI. I am also interested in the role of emerging resources (such as data centres) in future power systems, together with their broader policy and societal implications, including impacts on fuel poverty.
