@@ -49,9 +49,14 @@ latest_posts:
   </div>
 </div>
 
-I completed my **PhD** at the **University of Edinburgh** (2021--2025), supervised by Prof. Thomas Morstyn, Prof. Gareth Harrison, and Dr. Wei Sun. My thesis focused on *Unlocking Grid Flexibility of Distributed Energy Resources*. I was also a Visiting PhD Student at Oxford from 2024 to 2025.
-
-My research focuses on scalable and reliable decision-making methods for power system operation, including probabilistic safety guarantees through chance constraints and robust optimization under distribution shift, at the intersection of optimization and AI. I am also interested in the role of emerging resources (such as data centres) in future power systems, together with their broader policy and societal implications, including impacts on fuel poverty.
+<div class="bio-summary">
+  <p>
+    I completed my <strong>PhD</strong> at the <strong>University of Edinburgh</strong> (2021--2025), supervised by Prof. Thomas Morstyn, Prof. Gareth Harrison, and Dr. Wei Sun. My thesis focused on <em>Unlocking Grid Flexibility of Distributed Energy Resources</em>. I was also a Visiting PhD Student at Oxford from 2024 to 2025.
+  </p>
+  <p>
+    My research focuses on scalable and reliable decision-making methods for power system operation, including probabilistic safety guarantees through chance constraints and robust optimization under distribution shift, at the intersection of optimization and AI. I am also interested in the role of emerging resources (such as data centres) in future power systems, together with their broader policy and societal implications, including impacts on fuel poverty.
+  </p>
+</div>
 
 ### Education
 <div class="education-timeline">
