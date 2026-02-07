@@ -1563,7 +1563,7 @@ mjx-container[jax="CHTML"][display="true"] {
 body {
   font-family: "Source Sans 3", "Segoe UI", sans-serif;
   letter-spacing: 0.01em;
-  background: #ffffff;
+  background: var(--global-bg-color);
 }
 
 h1,
