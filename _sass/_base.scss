@@ -1923,8 +1923,8 @@ li a:not(.btn):hover,
 }
 
 .post .desc a {
-  color: color-mix(in srgb, var(--global-text-color-light) 92%, var(--global-link-color));
-  font-weight: 500;
+  color: color-mix(in srgb, var(--global-link-color) 78%, #4f89bf);
+  font-weight: 300;
   text-decoration: none;
 }
 
