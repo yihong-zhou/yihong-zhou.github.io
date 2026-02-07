@@ -37,7 +37,7 @@ latest_posts:
 
 <div class="collab-intro-card">
   <p>
-    I build <strong>safe and scalable AI methods for grid-edge flexibility</strong>, with a focus on uncertainty-aware optimization and market-compatible deployment.
+    I build <strong>safe and scalable decision-making methods for grid-edge flexibility</strong>, with a focus on uncertainty-aware AI and optimization tools as well as their market-compatible deployment.
   </p>
   <p>
     I am open to collaborations with universities, system operators, utilities, aggregators, and AI infrastructure teams.
