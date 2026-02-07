@@ -17,6 +17,8 @@ jobs:
 
       - name: Sync PDF from Overleaf
         env:
+          OVERLEAF_PROJECT_ID: ${{ secrets.OVERLEAF_PROJECT_ID }}
+          OVERLEAF_GIT_TOKEN: ${{ secrets.OVERLEAF_GIT_TOKEN }}
           OVERLEAF_GIT_URL: ${{ secrets.OVERLEAF_GIT_URL }}
           OVERLEAF_CV_PDF_PATH: ${{ secrets.OVERLEAF_CV_PDF_PATH }}
           LOCAL_CV_PDF_PATH: assets/pdf/Yihong_Zhou_CV.pdf
