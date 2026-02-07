@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/talks/";
           },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Curriculum Vitae (auto-synced from Overleaf PDF).",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
         },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
@@ -404,8 +411,8 @@ ninja.data = [{
           section: "News",},{id: "news-we-have-two-papers-accepted-for-power-systems-computation-conference-pscc-2026-see-you-in-limassol-cyprus",
           title: 'We have two papers accepted for (Power Systems Computation Conference) PSCC 2026! See...',
           description: "",
-          section: "News",},{id: "news-our-paper-independent-aggregators-securing-end-user-wasserstein-distributionally-robust-flexibility-through-bilevel-incentives-has-been-published-by-applied-energy-it-is-now-available-online-at-sciencedirect-https-www-sciencedirect-com-science-article-pii-s0306261926001364",
-          title: 'Our paper “Independent Aggregators Securing End-User Wasserstein Distributionally Robust Flexibility through Bilevel Incentives”...',
+          section: "News",},{id: "news-our-paper-independent-aggregators-securing-end-user-wasserstein-distributionally-robust-flexibility-through-bilevel-incentives-has-been-published-in-applied-energy-and-is-now-available-on-sciencedirect",
+          title: 'Our paper, “Independent Aggregators Securing End-User Wasserstein Distributionally Robust Flexibility through Bilevel Incentives,”...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
