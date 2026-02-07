@@ -11,6 +11,19 @@ nav_order: 4
 
 <div class="row talk-entry">
   <div class="col-sm-4">
+    {% include figure.liquid loading="eager" path="assets/img/202602FlexEdge.jpg" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm-8">
+    <h5>FleXEdge Project Workshop (Kick-off)</h5>
+    <p class="talk-meta"><strong>Role:</strong> Participant | <strong>Location:</strong> University of Oxford</p>
+    <p>
+      We organized the first FleXEdge workshop at Oxford and welcomed collaborators from Imperial College London, the University of Edinburgh (EPCC), and the Luxembourg Institute of Science and Technology (LIST).
+    </p>
+  </div>
+</div>
+
+<div class="row talk-entry">
+  <div class="col-sm-4">
     {% include figure.liquid loading="eager" path="assets/img/2026pesimpanel.jpg" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm-8">

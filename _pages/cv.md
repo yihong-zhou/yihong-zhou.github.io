@@ -4,7 +4,7 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 5
-description: Curriculum Vitae (auto-synced from Overleaf PDF).
+description: Curriculum Vitae.
 ---
 
 <div class="cv-page-shell">

@@ -75,3 +75,47 @@
   padding-left: 18px;
   margin-bottom: 0;
 }
+
+/*****************************
+ * Teaching page polish
+ *****************************/
+
+.teaching-page {
+  margin-top: 0.8rem;
+}
+
+.teaching-intro {
+  margin-bottom: 1.1rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  background-color: var(--global-card-bg-color);
+  color: var(--global-text-color-light);
+}
+
+.teaching-block {
+  margin-bottom: 1rem;
+  padding: 1rem 1rem 0.8rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 14px;
+  background-color: var(--global-card-bg-color);
+  box-shadow: 0 8px 18px rgba(8, 36, 64, 0.05);
+}
+
+.teaching-block h3 {
+  margin-bottom: 0.35rem;
+}
+
+.teaching-meta {
+  margin-bottom: 0.7rem;
+  color: var(--global-text-color-light);
+  font-size: 0.95rem;
+}
+
+.teaching-block ul {
+  padding-left: 1.15rem;
+}
+
+.teaching-block li {
+  margin-bottom: 0.45rem;
+}

@@ -27,13 +27,38 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a **Postdoctoral Researcher** at the [University of Oxford](http://www.ox.ac.uk/), where I work on **SAGEflex** (Safeguarded AI Agents for Grid-Edge Flexibility), funded by ARIA.
+<div class="position-card">
+  <div class="position-topline">Current Position</div>
+  <h3>Postdoctoral Researcher</h3>
+  <p>
+    <img src="/assets/img/oxford-crest.png" alt="University of Oxford crest" class="uni-crest" />
+    <a href="http://www.ox.ac.uk/">University of Oxford</a>
+  </p>
+</div>
 
 I completed my **PhD** at the **University of Edinburgh** (2021--2025), supervised by Prof. Thomas Morstyn, Prof. Gareth Harrison, and Dr. Wei Sun. My thesis focused on *Unlocking Grid Flexibility of Distributed Energy Resources*. I was also a Visiting PhD Student at Oxford from 2024 to 2025.
 
 My research focuses on scalable and reliable decision-making methods for power system operation, including probabilistic safety guarantees through chance constraints and robust optimization under distribution shift, at the intersection of optimization and AI. I am also interested in the role of emerging resources (such as data centres) in future power systems, together with their broader policy and societal implications, including impacts on fuel poverty.
 
 ### Education
-*   **PhD**, University of Edinburgh, 2025
-*   **MSc**, University of Edinburgh (Distinction), 2021
-*   **BEng**, North China Electric Power University, 2020
+<div class="education-timeline">
+  <div class="education-item">
+    <div class="edu-year">2025</div>
+    <div class="edu-content">
+      <h5><img src="/assets/img/edinburgh-crest.png" alt="University of Edinburgh crest" class="uni-crest" /> PhD, University of Edinburgh</h5>
+      <p>Thesis: <em>Unlocking Grid Flexibility of Distributed Energy Resources</em></p>
+    </div>
+  </div>
+  <div class="education-item">
+    <div class="edu-year">2021</div>
+    <div class="edu-content">
+      <h5><img src="/assets/img/edinburgh-crest.png" alt="University of Edinburgh crest" class="uni-crest" /> MSc (Distinction), University of Edinburgh</h5>
+    </div>
+  </div>
+  <div class="education-item">
+    <div class="edu-year">2020</div>
+    <div class="edu-content">
+      <h5><img src="/assets/img/ncepu-crest.png" alt="North China Electric Power University crest" class="uni-crest" /> BEng, North China Electric Power University</h5>
+    </div>
+  </div>
+</div>
