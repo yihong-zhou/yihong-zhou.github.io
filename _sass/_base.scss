@@ -1008,6 +1008,183 @@ footer.sticky-bottom {
   }
 }
 
+// Featured publications on About page: 2-column card grid.
+.featured-publications-grid {
+  margin-top: 1rem;
+}
+
+.featured-publications-grid ol.bibliography {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.featured-publications-grid ol.bibliography li {
+  margin-bottom: 0;
+  height: 100%;
+  padding: 0.9rem;
+}
+
+.featured-publications-grid ol.bibliography li > .row {
+  display: block;
+  margin: 0;
+}
+
+.featured-publications-grid .row .abbr {
+  width: 100%;
+  max-width: none;
+  margin-bottom: 0.65rem;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  border: 1px solid var(--global-divider-color);
+  background: color-mix(in srgb, var(--global-card-bg-color) 90%, #f4f7fb);
+  overflow: hidden;
+}
+
+.featured-publications-grid .row .abbr .badge {
+  display: none;
+}
+
+.featured-publications-grid .row .abbr .preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.featured-publications-grid .row .abbr figure,
+.featured-publications-grid .row .abbr picture {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+// Keep card thumbnails in cover mode, but preserve aspect ratio in zoomed view.
+.featured-publications-grid .preview.medium-zoom-image--opened,
+.featured-publications-grid .preview.medium-zoom-image--opening,
+.featured-publications-grid .preview.medium-zoom-image--closing {
+  width: auto !important;
+  height: auto !important;
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+  object-fit: contain !important;
+}
+
+.featured-publications-grid .row > [id] {
+  width: 100%;
+  max-width: none;
+}
+
+.featured-publications-grid .title {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+.featured-publications-grid .author {
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.featured-publications-grid .periodical {
+  font-size: 0.92rem;
+}
+
+.featured-publications-grid .abstract.open p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .featured-publications-grid ol.bibliography {
+    grid-template-columns: 1fr;
+  }
+}
+
+.featured-abstract-modal .modal-content {
+  border-radius: 14px;
+  border: 1px solid var(--global-divider-color);
+  background: var(--global-card-bg-color);
+}
+
+.featured-abstract-modal .modal-header {
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.featured-abstract-modal .featured-abstract-title {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.35;
+}
+
+.featured-abstract-modal .featured-abstract-meta {
+  margin-bottom: 0.75rem;
+  color: var(--global-text-color-light);
+  font-size: 0.95rem;
+}
+
+.featured-abstract-modal .featured-abstract-media {
+  margin-bottom: 0.9rem;
+}
+
+.featured-abstract-modal .featured-abstract-image {
+  display: block;
+  width: 100%;
+  max-height: 56vh;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid var(--global-divider-color);
+  background: color-mix(in srgb, var(--global-card-bg-color) 90%, #f4f7fb);
+}
+
+.featured-abstract-modal .featured-abstract-body p {
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.featured-abstract-modal .featured-abstract-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.featured-abstract-modal .featured-abstract-actions .btn {
+  font-size: 1.05rem;
+  padding: 0.46rem 1.05rem;
+}
+
+.featured-abstract-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1080;
+  background: rgba(8, 20, 36, 0.52);
+  padding: min(6vh, 48px) 18px;
+}
+
+.featured-abstract-modal.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-abstract-panel {
+  width: min(1000px, 96vw);
+  max-height: 88vh;
+  overflow: auto;
+  border-radius: 14px;
+  border: 1px solid var(--global-divider-color);
+  background: var(--global-card-bg-color);
+  box-shadow: var(--global-shadow-elevated);
+}
+
+body.featured-modal-open {
+  overflow: hidden;
+}
+
 // Rouge Color Customization
 figure.highlight {
   margin: 0 0 1rem;
