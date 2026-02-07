@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
+        },{id: "nav-collaboration",
+          title: "Collaboration",
+          description: "Collaboration opportunities in safe and scalable AI for power systems.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/collaboration/";
+          },
         },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
