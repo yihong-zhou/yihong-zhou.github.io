@@ -62,20 +62,23 @@ latest_posts:
   <div class="education-item">
     <div class="edu-year">2025</div>
     <div class="edu-content">
-      <h5><img src="/assets/img/edinburgh-crest.png" alt="University of Edinburgh crest" class="uni-crest" /> PhD, University of Edinburgh</h5>
+      <h5>PhD, University of Edinburgh </h5>
       <p>Thesis: <em>Unlocking Grid Flexibility of Distributed Energy Resources</em></p>
     </div>
+    <div class="edu-logo"><img src="/assets/img/edinburgh-crest.png" alt="University of Edinburgh crest" class="uni-crest" /></div>
   </div>
   <div class="education-item">
     <div class="edu-year">2021</div>
     <div class="edu-content">
-      <h5><img src="/assets/img/edinburgh-crest.png" alt="University of Edinburgh crest" class="uni-crest" /> MSc (Distinction), University of Edinburgh</h5>
+      <h5>MSc (Distinction), University of Edinburgh</h5>
     </div>
+    <div class="edu-logo"><img src="/assets/img/edinburgh-crest.png" alt="University of Edinburgh crest" class="uni-crest" /></div>
   </div>
   <div class="education-item">
     <div class="edu-year">2020</div>
     <div class="edu-content">
-      <h5><img src="/assets/img/ncepu-crest.png" alt="North China Electric Power University crest" class="uni-crest" /> BEng, North China Electric Power University</h5>
+      <h5>BEng, North China Electric Power University</h5>
     </div>
+    <div class="edu-logo"><img src="/assets/img/ncepu-crest.png" alt="North China Electric Power University crest" class="uni-crest" /></div>
   </div>
 </div>
