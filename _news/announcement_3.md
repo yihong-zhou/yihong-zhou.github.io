@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper "Independent Aggregators securing End User Wasserstein Distributionally Robust Flexibility through Bilevel Incentives" is accepted by ***Applied Energy***!
+Our paper "Independent Aggregators Securing End-User Wasserstein Distributionally Robust Flexibility through Bilevel Incentives" has been published by *Applied Energy*. It is now available online at ScienceDirect https://www.sciencedirect.com/science/article/pii/S0306261926001364.
