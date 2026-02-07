@@ -5,7 +5,7 @@ permalink: /
 subtitle: <a href='https://www.ox.ac.uk/'>University of Oxford</a>, Oxford, UK.
 
 profile:
-  align: right
+  align: left
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   # more_info: >
@@ -29,11 +29,10 @@ latest_posts:
 
 <div class="position-card">
   <div class="position-topline">Current Position</div>
-  <h3>Postdoctoral Researcher</h3>
-  <p>
+  <div class="position-main">
+    <h3>Postdoctoral Research Associate, University of Oxford</h3>
     <img src="/assets/img/oxford-crest.png" alt="University of Oxford crest" class="uni-crest" />
-    <a href="http://www.ox.ac.uk/">University of Oxford</a>
-  </p>
+  </div>
 </div>
 
 <div class="collab-intro-card">

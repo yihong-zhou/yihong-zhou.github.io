@@ -28,7 +28,8 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: $max-content-width;
+  width: min(94vw, $max-content-width);
+  max-width: min(94vw, $max-content-width);
 }
 
 // Profile

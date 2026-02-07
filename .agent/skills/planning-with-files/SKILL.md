@@ -1,7 +1,6 @@
 ---
 name: planning-with-files
 description: Implements Manus-style file-based planning for complex tasks. Creates task_plan.md, findings.md, and progress.md. Use when starting complex multi-step tasks, research projects, or any task requiring >5 tool calls.
-license: MIT
 ---
 
 # Planning with Files
