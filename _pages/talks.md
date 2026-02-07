@@ -11,7 +11,7 @@ nav_order: 4
 
 <div class="row talk-entry">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/202602FlexEdge.jpg" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/202602FlexEdge.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm-8">
     <h5>FleXEdge Project Workshop (Kick-off)</h5>
@@ -24,7 +24,7 @@ nav_order: 4
 
 <div class="row talk-entry">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/2026pesimpanel.jpg" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/2026pesimpanel.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm-8">
     <h5>Panel 4.5: Reinventing Future Electricity Markets with AI (IEEE PES International Meeting)</h5>
@@ -43,7 +43,7 @@ nav_order: 4
 
 <div class="row talk-entry">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/2025exeter.jpg" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/2025exeter.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm-8">
     <h5>GW4 Exeter Workshop</h5>
@@ -56,7 +56,7 @@ nav_order: 4
 
 <div class="row talk-entry">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/2025sageflex_workshop.jpg" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/2025sageflex_workshop.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm-8">
     <h5>Oxford Workshop on Safeguarded AI Agents</h5>
@@ -69,7 +69,7 @@ nav_order: 4
 
 <div class="row talk-entry">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/2025ncepu.jpg" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/2025ncepu.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm-8">
     <h5>Seminar: Towards Real-World, Computationally Affordable Reformulation of Uncertainty-Aware Power System Optimisation</h5>
@@ -88,7 +88,7 @@ nav_order: 4
 
 <div class="row talk-entry">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/2024pscc.jpg" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/2024pscc.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
   </div>
   <div class="col-sm-8">
     <h5>Power Systems Computation Conference (PSCC)</h5>
