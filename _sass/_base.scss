@@ -514,7 +514,7 @@ ul.task-list input[type="checkbox"] {
 .about-layout .about-sidebar {
   float: none !important;
   width: 100%;
-  margin: 0;
+  margin: 0.5rem 0 0;
   position: sticky;
   top: 86px;
 }
@@ -539,6 +539,7 @@ ul.task-list input[type="checkbox"] {
   .about-layout .about-sidebar {
     position: static;
     top: auto;
+    margin-top: 0;
     max-width: 260px;
   }
 }
