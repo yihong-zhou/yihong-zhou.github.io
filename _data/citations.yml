@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-02-06'
+  last_updated: '2026-02-11'
 papers:
   cY3c6eUAAAAJ:0EnyYjriUFMC:
     citations: 1
@@ -18,7 +18,7 @@ papers:
     title: Decision-focused Learning for Local Energy Communities Management Under Uncertainty
     year: Unknown Year
   cY3c6eUAAAAJ:8k81kl-MbHgC:
-    citations: 0
+    citations: 1
     title: 'FICA: Faster Inner Convex Approximation of Chance Constrained Grid Dispatch with Decision-Coupled Uncertainty'
     year: '2025'
   cY3c6eUAAAAJ:9yKSN-GCB0IC:
@@ -69,6 +69,10 @@ papers:
     citations: 0
     title: "\u57FA\u4E8E\u6DF1\u5EA6\u5B66\u4E60\u6280\u672F\u7684\u96C6\u7FA4\u7535\u52A8\u6C7D\u8F66\u53CA\u5BB6\u5EAD\u70ED\u6C34\u7CFB\u7EDF\u7075\u6D3B\u6027\u9884\u6D4B"
     year: Unknown Year
+  cY3c6eUAAAAJ:kNdYIx-mwKoC:
+    citations: 0
+    title: Independent aggregators securing end user Wasserstein distributionally robust flexibility through bilevel incentives
+    year: '2026'
   cY3c6eUAAAAJ:roLk4NBRz8UC:
     citations: 1
     title: Exploiting Data Centres and Local Energy Communities Synergies for Market Participation
