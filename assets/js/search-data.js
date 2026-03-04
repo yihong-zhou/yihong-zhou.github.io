@@ -144,7 +144,7 @@ ninja.data = [{
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/yihong-zhou-21828b202", "_blank");
+          window.open("https://www.linkedin.com/in/yihong-zhou-dr", "_blank");
         },
       },{
         id: 'social-github',
