@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-09'
+  last_updated: '2026-03-20'
 papers:
   cY3c6eUAAAAJ:0EnyYjriUFMC:
     citations: 1
@@ -22,11 +22,11 @@ papers:
     title: 'FICA: Faster Inner Convex Approximation of Chance Constrained Grid Dispatch with Decision-Coupled Uncertainty'
     year: '2025'
   cY3c6eUAAAAJ:9yKSN-GCB0IC:
-    citations: 34
+    citations: 35
     title: Flexibility prediction of aggregated electric vehicles and domestic hot water systems in smart grids
     year: '2021'
   cY3c6eUAAAAJ:IjCSPb-OGe4C:
-    citations: 9
+    citations: 10
     title: Evaluating the social benefits and network costs of heat pumps as an energy crisis intervention
     year: '2024'
   cY3c6eUAAAAJ:KlAtU1dfN6UC:
@@ -34,7 +34,7 @@ papers:
     title: Independent aggregators securing end user Wasserstein distributionally robust flexibility through bilevel incentives
     year: '2026'
   cY3c6eUAAAAJ:LkGwnXOMwfcC:
-    citations: 7
+    citations: 8
     title: Ai-focused hpc data centers can provide more power grid flexibility and at lower cost
     year: '2024'
   cY3c6eUAAAAJ:MXK_kJrjxJIC:
@@ -42,15 +42,15 @@ papers:
     title: Unlocking grid flexibility of distributed energy resources
     year: '2025'
   cY3c6eUAAAAJ:Se3iqnhoufwC:
-    citations: 4
+    citations: 5
     title: Strengthened and faster linear approximation to joint chance constraints with wasserstein ambiguity
     year: '2024'
   cY3c6eUAAAAJ:UebtZRa9Y70C:
-    citations: 8
+    citations: 9
     title: Large language model interface for home energy management systems
     year: '2025'
   cY3c6eUAAAAJ:WF5omc3nYNoC:
-    citations: 9
+    citations: 10
     title: Datasets of Great Britain primary substations integrated with household heating information
     year: '2024'
   cY3c6eUAAAAJ:YsMSGLbcyi4C:
@@ -66,7 +66,7 @@ papers:
     title: Real-time Optimization Scheduling Strategy for Aggregated Electric Vehicles Supported by Artificial Intelligence Technology
     year: '2020'
   cY3c6eUAAAAJ:eQOLeE2rZwMC:
-    citations: 22
+    citations: 23
     title: Aggregated feasible active power region for distributed energy resources with a distributionally robust joint probabilistic guarantee
     year: '2024'
   cY3c6eUAAAAJ:kNdYIx-mwKoC:
@@ -86,6 +86,6 @@ papers:
     title: LSTM Network-Based Method for Flexibility Prediction of Aggregated Electric Vehicles in Smart Grid
     year: '2020'
   cY3c6eUAAAAJ:ufrVoPGSRksC:
-    citations: 7
+    citations: 9
     title: A novel surrogate polytope method for day-ahead virtual power plant scheduling with joint probabilistic constraints
     year: '2024'
