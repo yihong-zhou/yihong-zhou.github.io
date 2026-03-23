@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-20'
+  last_updated: '2026-03-23'
 papers:
   cY3c6eUAAAAJ:0EnyYjriUFMC:
     citations: 1
@@ -78,7 +78,7 @@ papers:
     title: Exploiting Data Centres and Local Energy Communities Synergies for Market Participation
     year: '2024'
   cY3c6eUAAAAJ:u-x6o8ySG0sC:
-    citations: 81
+    citations: 82
     title: LSTM-based energy management for electric vehicle charging in commercial-building prosumers
     year: '2021'
   cY3c6eUAAAAJ:u5HHmVD_uO8C:
