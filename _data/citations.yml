@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-04-03'
+  last_updated: '2026-04-15'
 papers:
   cY3c6eUAAAAJ:0EnyYjriUFMC:
     citations: 1
     title: Bilevel transmission expansion planning with joint chance-constrained dispatch
     year: '2025'
   cY3c6eUAAAAJ:2osOgNQ5qMEC:
-    citations: 81
+    citations: 82
     title: Robust load forecasting towards adversarial attacks via Bayesian learning
     year: '2022'
   cY3c6eUAAAAJ:3fE2CSJIrl8C:
@@ -22,11 +22,11 @@ papers:
     title: 'FICA: Faster Inner Convex Approximation of Chance Constrained Grid Dispatch with Decision-Coupled Uncertainty'
     year: '2025'
   cY3c6eUAAAAJ:9yKSN-GCB0IC:
-    citations: 35
+    citations: 36
     title: Flexibility prediction of aggregated electric vehicles and domestic hot water systems in smart grids
     year: '2021'
   cY3c6eUAAAAJ:IjCSPb-OGe4C:
-    citations: 10
+    citations: 11
     title: Evaluating the social benefits and network costs of heat pumps as an energy crisis intervention
     year: '2024'
   cY3c6eUAAAAJ:KlAtU1dfN6UC:
@@ -34,7 +34,7 @@ papers:
     title: Independent aggregators securing end user Wasserstein distributionally robust flexibility through bilevel incentives
     year: '2026'
   cY3c6eUAAAAJ:LkGwnXOMwfcC:
-    citations: 8
+    citations: 9
     title: Ai-focused hpc data centers can provide more power grid flexibility and at lower cost
     year: '2024'
   cY3c6eUAAAAJ:MXK_kJrjxJIC:
@@ -46,7 +46,7 @@ papers:
     title: Strengthened and faster linear approximation to joint chance constraints with wasserstein ambiguity
     year: '2024'
   cY3c6eUAAAAJ:UebtZRa9Y70C:
-    citations: 10
+    citations: 13
     title: Large language model interface for home energy management systems
     year: '2025'
   cY3c6eUAAAAJ:WF5omc3nYNoC:
@@ -57,8 +57,12 @@ papers:
     citations: 0
     title: Assessment of options for a smart, resilient and low-carbon multi-vector energy system in the Scottish Borders
     year: '2023'
+  cY3c6eUAAAAJ:Zph67rFs4hoC:
+    citations: 0
+    title: Grid-Intelligent AI Data Centres for Primary
+    year: Unknown Year
   cY3c6eUAAAAJ:_FxGoFyzp5QC:
-    citations: 4
+    citations: 5
     title: Evaluating and comparing the potentials in primary response for GPU and CPU data centers
     year: '2024'
   cY3c6eUAAAAJ:d1gkVwhDpl0C:
@@ -74,7 +78,7 @@ papers:
     title: Independent aggregators securing end user Wasserstein distributionally robust flexibility through bilevel incentives
     year: '2026'
   cY3c6eUAAAAJ:roLk4NBRz8UC:
-    citations: 1
+    citations: 2
     title: Exploiting Data Centres and Local Energy Communities Synergies for Market Participation
     year: '2024'
   cY3c6eUAAAAJ:u-x6o8ySG0sC:
