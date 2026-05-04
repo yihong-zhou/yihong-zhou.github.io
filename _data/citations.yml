@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-04-24'
+  last_updated: '2026-05-04'
 papers:
   cY3c6eUAAAAJ:0EnyYjriUFMC:
     citations: 1
     title: Bilevel transmission expansion planning with joint chance-constrained dispatch
     year: '2025'
   cY3c6eUAAAAJ:2osOgNQ5qMEC:
-    citations: 82
+    citations: 84
     title: Robust load forecasting towards adversarial attacks via Bayesian learning
     year: '2022'
   cY3c6eUAAAAJ:3fE2CSJIrl8C:
@@ -45,6 +45,10 @@ papers:
     citations: 5
     title: Strengthened and faster linear approximation to joint chance constraints with wasserstein ambiguity
     year: '2024'
+  cY3c6eUAAAAJ:ULOm3_A8WrAC:
+    citations: 0
+    title: 'GradMAP: Gradient-Based Multi-Agent Proximal Learning for Grid-Edge Flexibility'
+    year: '2026'
   cY3c6eUAAAAJ:UebtZRa9Y70C:
     citations: 15
     title: Large language model interface for home energy management systems
@@ -70,7 +74,7 @@ papers:
     title: Real-time Optimization Scheduling Strategy for Aggregated Electric Vehicles Supported by Artificial Intelligence Technology
     year: '2020'
   cY3c6eUAAAAJ:eQOLeE2rZwMC:
-    citations: 24
+    citations: 25
     title: Aggregated feasible active power region for distributed energy resources with a distributionally robust joint probabilistic guarantee
     year: '2024'
   cY3c6eUAAAAJ:kNdYIx-mwKoC:
@@ -82,7 +86,7 @@ papers:
     title: Exploiting Data Centres and Local Energy Communities Synergies for Market Participation
     year: '2024'
   cY3c6eUAAAAJ:u-x6o8ySG0sC:
-    citations: 82
+    citations: 84
     title: LSTM-based energy management for electric vehicle charging in commercial-building prosumers
     year: '2021'
   cY3c6eUAAAAJ:u5HHmVD_uO8C:
