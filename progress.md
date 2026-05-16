@@ -175,3 +175,19 @@ Add newly provided 2026 session chair roles to the CV and news section.
 - English and Chinese CV compiles passed; both outputs remained 3 pages.
 - Confirmed English PDF metadata contains `pdfTeX-1.40.27`.
 - Docker Jekyll build passed after adding the news items and updated PDFs.
+
+---
+
+## Session Update: Deploy Submodule Checkout Fix
+
+### Objective
+Fix GitHub Actions deploy failure caused by checkout attempting to clone the CV submodule.
+
+### Actions Completed
+- Removed `submodules: recursive` from `.github/workflows/deploy.yml`.
+- Changed the CV page TeX source links to point directly at the GitHub CV repository instead of local submodule paths.
+- Kept the CV PDFs served locally from `assets/pdf`, so the visible CV page still works without cloning the CV source during deploy.
+
+### Verification
+- Docker Jekyll build passed after the workflow and CV link changes.
+- Expected effect: deploy no longer needs access to `yihong-zhou/Yihong-Zhou-CV.git`, avoiding private-submodule checkout failure.

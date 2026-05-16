@@ -20,7 +20,7 @@ description: Curriculum Vitae.
       <div class="cv-page-toolbar">
         <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_en.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Open PDF</a>
         <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_en.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
-        <a class="btn btn-sm z-depth-0" href="/assets/cv/Yihong-Zhou-CV/main.tex"><i class="fa-solid fa-code" aria-hidden="true"></i> TeX Source</a>
+        <a class="btn btn-sm z-depth-0" href="https://github.com/yihong-zhou/Yihong-Zhou-CV/blob/main/main.tex" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code" aria-hidden="true"></i> TeX Source</a>
       </div>
       <iframe
         class="cv-page-embed"
@@ -33,7 +33,7 @@ description: Curriculum Vitae.
       <div class="cv-page-toolbar">
         <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_zh.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> 打开 PDF</a>
         <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_zh.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> 下载</a>
-        <a class="btn btn-sm z-depth-0" href="/assets/cv/Yihong-Zhou-CV/Chinese.tex"><i class="fa-solid fa-code" aria-hidden="true"></i> TeX 源码</a>
+        <a class="btn btn-sm z-depth-0" href="https://github.com/yihong-zhou/Yihong-Zhou-CV/blob/main/Chinese.tex" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code" aria-hidden="true"></i> TeX 源码</a>
       </div>
       <iframe
         class="cv-page-embed"
