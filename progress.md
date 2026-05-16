@@ -191,3 +191,29 @@ Fix GitHub Actions deploy failure caused by checkout attempting to clone the CV 
 ### Verification
 - Docker Jekyll build passed after the workflow and CV link changes.
 - Expected effect: deploy no longer needs access to `yihong-zhou/Yihong-Zhou-CV.git`, avoiding private-submodule checkout failure.
+
+---
+
+## Session Update: Academic-Star Homepage Redesign
+
+### Objective
+Make the homepage feel more focused, ambitious, and visually polished, with a clearer academic identity and less CV-like clutter.
+
+### Actions Completed
+- Rewrote `_pages/about.md` around a sharper narrative:
+  - hero thesis: building the control layer for flexible, AI-native power systems;
+  - compact proof strip;
+  - flagship work with publication preview images;
+  - current research agenda;
+  - leadership/service signal;
+  - compressed CV/background section.
+- Kept English/Chinese language toggle with English default.
+- Limited homepage news to six items.
+- Disabled the default Featured publications block because custom flagship work now carries that role.
+- Added new `star-*` homepage styles in `_sass/_base.scss`, including responsive layouts, publication-image cards, proof strip, leadership band, and CV band.
+
+### Verification
+- `_pages/about.md` front matter parsed successfully.
+- Required publication preview images exist.
+- Docker Jekyll build passed; only existing Sass/nbconvert warnings appeared.
+- Generated `_site/index.html` contains the new hero, research thesis, flagship work, session chair entries, and publication preview image references.

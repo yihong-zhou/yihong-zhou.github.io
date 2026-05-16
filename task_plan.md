@@ -164,3 +164,37 @@ Phase 4
 | Use `assets/cv/Yihong-Zhou-CV` as the submodule path | Preserves existing CV page links and keeps the directory intuitive |
 | Track CV repo `main` branch in `.gitmodules` | The cloned CV repository is currently on `main` |
 | Compile generated PDFs into `assets/pdf` | Existing CV page already serves PDFs from this directory |
+
+---
+
+# Task Plan: Academic-Star Homepage Redesign
+
+## Goal
+Rework the homepage so it feels like a focused, high-potential academic profile rather than a collection of CV facts: sharper research thesis, stronger evidence hierarchy, more visual polish, and less duplicated clutter.
+
+## Current Phase
+Complete
+
+## Phases
+### Phase 1: Discovery
+- [x] Inspect current homepage structure
+- [x] Inspect current custom styling and available visual assets
+- **Status:** complete
+
+### Phase 2: Redesign
+- [x] Rewrite homepage content around identity, thesis, proof, agenda, and CV
+- [x] Add polished homepage components and responsive styles
+- [x] Reduce duplicated lower-page clutter
+- **Status:** complete
+
+### Phase 3: Verification
+- [x] Build site locally
+- [x] Check generated homepage references
+- **Status:** complete
+
+## Decisions Made
+| Decision | Rationale |
+|----------|-----------|
+| Keep bilingual toggle with English default | User requested bilingual homepage earlier; it remains useful |
+| Limit News and remove auto Featured publications from homepage | Reduces duplication and visual clutter because recent/selected work is now explicitly curated |
+| Use publication preview images in selected evidence cards | Adds visual richness while staying academically grounded |

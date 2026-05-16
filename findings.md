@@ -199,3 +199,20 @@ Audit focused on homepage and adjacent conversion pages:
 ## Updated Surfaces
 - English CV and Chinese CV now include both roles under 2026 academic leadership/session chair activities.
 - News section has two new inline announcements for the session chair roles.
+
+---
+
+# Findings: Academic-Star Homepage Redesign
+
+## Current Homepage Issues
+- The current homepage contains good information, but the order reads like a CV summary rather than a coherent academic identity.
+- Research focus, recent papers, CV, bio, and education all compete for attention at the same visual level.
+- The built-in "Featured publications" section duplicates the custom recent-paper cards, increasing clutter.
+- The hero states the research area but does not yet make a memorable claim about what the researcher is becoming known for.
+
+## Design Direction
+- Lead with one memorable research thesis: grid-intelligent AI infrastructure and grid-edge flexibility.
+- Use a compact proof strip for credibility signals, not a long list of facts.
+- Present three flagship works with images and precise impact.
+- Move biography/education lower and compress it into a quieter credibility section.
+- Keep bilingual support but make English the default.
