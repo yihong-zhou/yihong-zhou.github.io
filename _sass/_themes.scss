@@ -27,6 +27,8 @@
   --global-shadow-elevated: 0 10px 28px rgba(16, 44, 74, 0.09);
   --global-shadow-soft: 0 4px 14px rgba(16, 44, 74, 0.08);
   --global-page-gradient: linear-gradient(180deg, #f7fafe 0%, #f2f6fb 42%, #f6f8fc 100%);
+  --home-warm-accent: #8a5a18;
+  --home-green-accent: #2d7a68;
   --global-back-to-top-bg-color: rgba(
     #{color.channel($black-color, "red", $space: rgb)},
     #{color.channel($black-color, "green", $space: rgb)},
@@ -105,6 +107,8 @@ html[data-theme="dark"] {
   --global-shadow-elevated: 0 12px 32px rgba(0, 0, 0, 0.3);
   --global-shadow-soft: 0 4px 14px rgba(0, 0, 0, 0.25);
   --global-page-gradient: linear-gradient(180deg, #121821 0%, #131c27 36%, #121821 100%);
+  --home-warm-accent: #d8b06a;
+  --home-green-accent: #70c2ae;
   --global-back-to-top-bg-color: rgba(
     #{color.channel($white-color, "red", $space: rgb)},
     #{color.channel($white-color, "green", $space: rgb)},

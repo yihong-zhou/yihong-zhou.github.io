@@ -7,14 +7,39 @@ nav_order: 5
 description: Curriculum Vitae.
 ---
 
-<div class="cv-page-shell">
-  <div class="cv-page-toolbar">
-    <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
-    <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV.pdf" download>Download</a>
+<div class="cv-page-shell language-switch">
+  <input class="lang-toggle-input" type="radio" name="cv-lang" id="cv-lang-en" checked>
+  <input class="lang-toggle-input" type="radio" name="cv-lang" id="cv-lang-zh">
+  <div class="lang-toggle-labels cv-lang-labels" aria-label="CV language">
+    <label for="cv-lang-en"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> English CV</label>
+    <label for="cv-lang-zh"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> 中文简历</label>
   </div>
-  <iframe
-    class="cv-page-embed"
-    src="/assets/pdf/Yihong_Zhou_CV.pdf#view=FitH"
-    title="Yihong Zhou CV"
-  ></iframe>
+
+  <div class="language-panels cv-language-panels">
+    <section class="lang-panel lang-panel-en" lang="en">
+      <div class="cv-page-toolbar">
+        <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_en.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Open PDF</a>
+        <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_en.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
+        <a class="btn btn-sm z-depth-0" href="/assets/cv/Yihong-Zhou-CV/main.tex"><i class="fa-solid fa-code" aria-hidden="true"></i> TeX Source</a>
+      </div>
+      <iframe
+        class="cv-page-embed"
+        src="/assets/pdf/Yihong_Zhou_CV_en.pdf#view=FitH"
+        title="Yihong Zhou English CV"
+      ></iframe>
+    </section>
+
+    <section class="lang-panel lang-panel-zh" lang="zh-Hans">
+      <div class="cv-page-toolbar">
+        <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_zh.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> 打开 PDF</a>
+        <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_zh.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> 下载</a>
+        <a class="btn btn-sm z-depth-0" href="/assets/cv/Yihong-Zhou-CV/Chinese.tex"><i class="fa-solid fa-code" aria-hidden="true"></i> TeX 源码</a>
+      </div>
+      <iframe
+        class="cv-page-embed"
+        src="/assets/pdf/Yihong_Zhou_CV_zh.pdf#view=FitH"
+        title="Yihong Zhou Chinese CV"
+      ></iframe>
+    </section>
+  </div>
 </div>

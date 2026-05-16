@@ -1,0 +1,95 @@
+name: Build CV PDFs
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - cv-updated
+  schedule:
+    - cron: "20 3 * * 1"
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - ".gitmodules"
+      - "assets/cv/Yihong-Zhou-CV"
+      - "assets/cv/Yihong-Zhou-CV/**"
+      - "assets/pdf/Yihong_Zhou_CV.pdf"
+      - "assets/pdf/Yihong_Zhou_CV_en.pdf"
+      - "assets/pdf/Yihong_Zhou_CV_zh.pdf"
+      - ".github/workflows/build-cv.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cv-pdf-build
+  cancel-in-progress: false
+
+jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout site
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Update CV submodule
+        id: cv-source
+        run: |
+          before="$(git rev-parse HEAD:assets/cv/Yihong-Zhou-CV)"
+          git submodule update --remote --checkout assets/cv/Yihong-Zhou-CV
+          after="$(git -C assets/cv/Yihong-Zhou-CV rev-parse HEAD)"
+
+          echo "before=${before}"
+          echo "after=${after}"
+          if [ "${before}" = "${after}" ]; then
+            echo "changed=false" >> "${GITHUB_OUTPUT}"
+          else
+            echo "changed=true" >> "${GITHUB_OUTPUT}"
+          fi
+
+          echo "SOURCE_DATE_EPOCH=$(git -C assets/cv/Yihong-Zhou-CV log -1 --format=%ct)" >> "${GITHUB_ENV}"
+          echo "TZ=UTC" >> "${GITHUB_ENV}"
+
+      - name: Install TeX Live
+        if: github.event_name != 'schedule' || steps.cv-source.outputs.changed == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            latexmk \
+            texlive-fonts-extra \
+            texlive-fonts-recommended \
+            texlive-lang-chinese \
+            texlive-latex-extra \
+            texlive-xetex
+
+      - name: Build English and Chinese CVs
+        if: github.event_name != 'schedule' || steps.cv-source.outputs.changed == 'true'
+        working-directory: assets/cv/Yihong-Zhou-CV
+        run: |
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error main.tex
+          cp main.pdf ../../pdf/Yihong_Zhou_CV_en.pdf
+          cp main.pdf ../../pdf/Yihong_Zhou_CV.pdf
+
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error Chinese.tex
+          cp Chinese.pdf ../../pdf/Yihong_Zhou_CV_zh.pdf
+
+          latexmk -C main.tex Chinese.tex
+
+      - name: Commit refreshed CV assets
+        if: github.event_name != 'schedule' || steps.cv-source.outputs.changed == 'true'
+        run: |
+          if git diff --quiet -- .gitmodules assets/cv/Yihong-Zhou-CV assets/pdf/Yihong_Zhou_CV.pdf assets/pdf/Yihong_Zhou_CV_en.pdf assets/pdf/Yihong_Zhou_CV_zh.pdf; then
+            echo "CV PDFs are already up to date."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add .gitmodules assets/cv/Yihong-Zhou-CV assets/pdf/Yihong_Zhou_CV.pdf assets/pdf/Yihong_Zhou_CV_en.pdf assets/pdf/Yihong_Zhou_CV_zh.pdf
+            git commit -m "Update CV PDFs"
+            git push
+          fi

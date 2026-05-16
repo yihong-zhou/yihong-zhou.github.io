@@ -227,6 +227,14 @@ ul.timeline li::before {
   margin-top: 0.8rem;
 }
 
+.cv-language-panels {
+  padding: 1rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  background: var(--global-card-bg-color);
+  box-shadow: var(--global-shadow-soft);
+}
+
 .cv-page-toolbar {
   margin-bottom: 0.85rem;
   display: flex;
@@ -238,7 +246,7 @@ ul.timeline li::before {
   width: 100%;
   min-height: 980px;
   border: 1px solid var(--global-divider-color);
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: var(--global-card-bg-color);
 }
 
