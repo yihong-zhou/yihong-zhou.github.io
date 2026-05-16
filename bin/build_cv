@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+CV_DIR="${ROOT_DIR}/assets/cv/Yihong-Zhou-CV"
+PDF_DIR="${ROOT_DIR}/assets/pdf"
+
+if ! command -v latexmk >/dev/null 2>&1; then
+  echo "error: latexmk is not installed or not on PATH" >&2
+  exit 1
+fi
+
+if [ ! -f "${CV_DIR}/main.tex" ] || [ ! -f "${CV_DIR}/Chinese.tex" ]; then
+  echo "error: CV TeX files were not found in ${CV_DIR}" >&2
+  exit 1
+fi
+
+mkdir -p "${PDF_DIR}"
+
+cd "${CV_DIR}"
+
+echo "Building English CV with pdflatex..."
+latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error main.tex
+cp main.pdf "${PDF_DIR}/Yihong_Zhou_CV_en.pdf"
+cp main.pdf "${PDF_DIR}/Yihong_Zhou_CV.pdf"
+
+echo "Building Chinese CV with xelatex..."
+latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error Chinese.tex
+cp Chinese.pdf "${PDF_DIR}/Yihong_Zhou_CV_zh.pdf"
+
+latexmk -C main.tex Chinese.tex
+rm -rf .output
+
+echo "Updated CV PDFs in ${PDF_DIR}"
