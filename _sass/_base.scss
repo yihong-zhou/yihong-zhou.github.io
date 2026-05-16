@@ -1644,6 +1644,12 @@ footer.sticky-bottom {
     padding: 0;
     margin-top: 0;
 
+    .publication-anchor {
+      display: block;
+      height: 0;
+      scroll-margin-top: 92px;
+    }
+
     li {
       margin-bottom: 1rem;
       padding: 1rem 1rem 0.85rem;
