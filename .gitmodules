@@ -1,0 +1,4 @@
+[submodule "assets/cv/Yihong-Zhou-CV"]
+	path = assets/cv/Yihong-Zhou-CV
+	url = https://github.com/yihong-zhou/Yihong-Zhou-CV.git
+	branch = main
