@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-05-04'
+  last_updated: '2026-05-18'
 papers:
   cY3c6eUAAAAJ:0EnyYjriUFMC:
     citations: 1
     title: Bilevel transmission expansion planning with joint chance-constrained dispatch
     year: '2025'
   cY3c6eUAAAAJ:2osOgNQ5qMEC:
-    citations: 84
+    citations: 85
     title: Robust load forecasting towards adversarial attacks via Bayesian learning
     year: '2022'
   cY3c6eUAAAAJ:3fE2CSJIrl8C:
@@ -44,19 +44,23 @@ papers:
   cY3c6eUAAAAJ:Se3iqnhoufwC:
     citations: 5
     title: Strengthened and faster linear approximation to joint chance constraints with wasserstein ambiguity
-    year: '2024'
+    year: '2026'
   cY3c6eUAAAAJ:ULOm3_A8WrAC:
     citations: 0
     title: 'GradMAP: Gradient-Based Multi-Agent Proximal Learning for Grid-Edge Flexibility'
     year: '2026'
   cY3c6eUAAAAJ:UebtZRa9Y70C:
-    citations: 15
+    citations: 17
     title: Large language model interface for home energy management systems
     year: '2025'
   cY3c6eUAAAAJ:WF5omc3nYNoC:
     citations: 10
     title: Datasets of Great Britain primary substations integrated with household heating information
     year: '2024'
+  cY3c6eUAAAAJ:YOwf2qJgpHMC:
+    citations: 0
+    title: JAX-Based Batched AC Power Flow for GPU Acceleration and AI Ecosystem Integration
+    year: '2026'
   cY3c6eUAAAAJ:YsMSGLbcyi4C:
     citations: 0
     title: Assessment of options for a smart, resilient and low-carbon multi-vector energy system in the Scottish Borders
@@ -94,6 +98,6 @@ papers:
     title: LSTM Network-Based Method for Flexibility Prediction of Aggregated Electric Vehicles in Smart Grid
     year: '2020'
   cY3c6eUAAAAJ:ufrVoPGSRksC:
-    citations: 10
+    citations: 11
     title: A novel surrogate polytope method for day-ahead virtual power plant scheduling with joint probabilistic constraints
     year: '2024'
