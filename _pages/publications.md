@@ -9,17 +9,19 @@ nav_order: 2
 
 <!-- _pages/publications.md -->
 
-<p class="publications-page-note">
-  You can also find my publications on
-  <a href="https://scholar.google.com/citations?user=cY3c6eUAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>.
-</p>
+<div class="publications-index-shell">
+  <p class="publications-page-note">
+    You can also find my publications on
+    <a href="https://scholar.google.com/citations?user=cY3c6eUAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>.
+  </p>
 
-<!-- Bibsearch Feature -->
+  <!-- Bibsearch Feature -->
 
-{% include bib_search.liquid %}
+  {% include bib_search.liquid %}
 
-<div class="publications">
+  <div class="publications publications-index">
 
-{% bibliography %}
+  {% bibliography %}
 
+  </div>
 </div>

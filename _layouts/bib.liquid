@@ -10,8 +10,8 @@
           {% if site.data.venues[entry.abbr].color != blank %}
             {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
           {%- endif -%}
-          <abbr
-            class="badge rounded w-100"
+          <span
+            class="publication-venue-badge"
             {% if venue_style %}
               {{ venue_style }}
             {% endif -%}
@@ -19,11 +19,11 @@
             {% if site.data.venues[entry.abbr].url %}
               <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
             {% else %}
-              <div>{{- entry.abbr -}}</div>
+              <span class="publication-venue-label">{{- entry.abbr -}}</span>
             {% endif %}
-          </abbr>
+          </span>
         {% else %}
-          <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
+          <span class="publication-venue-badge"><span class="publication-venue-label">{{ entry.abbr }}</span></span>
         {% endif %}
       {% endif %}
       {% if entry.preview %}
@@ -324,7 +324,7 @@
               role="button"
             >
               {% assign citation_count = 0 %}
-              {% assign scholar_id_key = site.scholar_userid | append: ':' | append: entry.google_scholar_id %}
+              {% assign scholar_id_key = site.data.socials.scholar_userid | append: ':' | append: entry.google_scholar_id %}
               {% assign publication_key = entry.google_scholar_id %}
 
               {% if site.data.citations.papers[scholar_id_key] %}
