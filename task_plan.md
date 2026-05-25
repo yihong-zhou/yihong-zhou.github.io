@@ -198,3 +198,32 @@ Complete
 | Keep bilingual toggle with English default | User requested bilingual homepage earlier; it remains useful |
 | Limit News and remove auto Featured publications from homepage | Reduces duplication and visual clutter because recent/selected work is now explicitly curated |
 | Use publication preview images in selected evidence cards | Adds visual richness while staying academically grounded |
+
+---
+
+# Task Plan: Homepage Layout Audit and Tightening
+
+## Goal
+Review the current generated homepage layout as a whole and fix obvious visual balance problems, especially the oversized/empty hero panel and underpowered CTA buttons.
+
+## Current Phase
+Phase 3
+
+## Phases
+### Phase 1: Visual Audit
+- [x] Capture user-reported hero issue
+- [x] Inspect generated layout/CSS structure
+- [x] Identify high-impact layout fixes beyond the reported screenshot
+- **Status:** complete
+
+### Phase 2: Implementation
+- [x] Tighten hero panel spacing and height
+- [x] Restore CTA button size/weight and hierarchy
+- [x] Check related homepage sections for density/spacing issues
+- **Status:** complete
+
+### Phase 3: Verification
+- [x] Build site locally
+- [x] Confirm generated HTML/CSS reflect layout fixes
+- [x] Summarize remaining caveats
+- **Status:** complete

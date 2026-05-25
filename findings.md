@@ -216,3 +216,32 @@ Audit focused on homepage and adjacent conversion pages:
 - Present three flagship works with images and precise impact.
 - Move biography/education lower and compress it into a quieter credibility section.
 - Keep bilingual support but make English the default.
+
+---
+
+# Findings: Homepage Layout Audit 2026-05-25
+
+## User-Reported Issue
+- Hero panel currently has too much empty vertical space after the lead paragraph.
+- CTA labels such as "CV" and "Collaborate" appear too small and weak.
+- The hero card reads visually unfinished because the large white panel is much taller than its content.
+
+## Initial Diagnosis
+- `.star-hero` uses a two-column grid, but on the user's viewport only the text column is visible in the screenshot; the panel still reserves generous padding and vertical rhythm.
+- `.star-actions .btn` inherits compact al-folio button sizing, so labels are visually underpowered relative to the hero copy.
+- Recent font-size reductions improved the headline scale, but the surrounding panel spacing now needs a density pass.
+
+## Local Screenshot Review
+- At 1200x1100, the hero copy card still has a large blank lower half because `.star-hero-copy` sets `min-height: 23rem`.
+- CTA buttons render as small centered fragments inside a large card; they need stronger padding, type size, and better row placement.
+- The right proof cards are visually acceptable, but the hero left panel feels oversized relative to them.
+- The Research Thesis and proof strip are readable; main immediate issue is above-the-fold balance.
+
+## Post-Fix Review
+- Desktop hero is now content-height rather than forced-height; the blank lower half is gone.
+- Publications now renders as a visible primary CTA after adding stronger specificity against global `a.btn` styles.
+- CV and Collaborate are larger and more legible.
+- Right-side proof cards were compacted to reduce excess vertical space before Research Thesis.
+- A narrow headless Chrome screenshot still shows cropping at 390px, likely because Chrome command-line layout viewport is wider than the screenshot crop; CSS now includes explicit mobile max-width and overflow guards.
+- Follow-up alignment pass: hero card now stretches to the proof-card stack height, while its content is vertically centered; the left and right card bottoms align cleanly in the wide screenshot.
+- Mobile overflow pass: language toggle labels and hero copy children now have explicit shrink/wrap rules, so real narrow viewports should not inherit desktop intrinsic widths.
