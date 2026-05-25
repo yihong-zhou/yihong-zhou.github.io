@@ -217,3 +217,30 @@ Make the homepage feel more focused, ambitious, and visually polished, with a cl
 - Required publication preview images exist.
 - Docker Jekyll build passed; only existing Sass/nbconvert warnings appeared.
 - Generated `_site/index.html` contains the new hero, research thesis, flagship work, session chair entries, and publication preview image references.
+
+---
+
+## Session Update: Homepage Layout Audit 2026-05-25
+
+### Objective
+Fix visual balance issues on the redesigned homepage after user feedback: oversized hero panel, weak CTA buttons, and excessive whitespace.
+
+### Actions Started
+- Logged the user-reported screenshot issue.
+- Began inspecting homepage styles and generated structure.
+
+### Actions Completed
+- Captured local desktop screenshots with headless Chrome.
+- Removed forced hero card height and stopped grid stretch from creating blank card space.
+- Increased `star-actions` button padding, font size, and icon size.
+- Fixed primary CTA styling specificity so Publications appears as a real primary button.
+- Compacted right-side proof cards to reduce vertical gap before Research Thesis.
+- Added mobile-width guards for containers, language switch, language panels, and hero card.
+- Added a final mobile overflow pass so the language toggle and hero copy wrap within the viewport.
+- Rebuilt the site successfully with Docker Compose.
+
+### Verification
+- Desktop screenshot review shows the hero panel is no longer mostly empty.
+- Full-height desktop screenshot shows Research Thesis, proof strip, flagship work, agenda, leadership, and CV sections maintain coherent spacing.
+- Narrow headless Chrome screenshot still appears cropped at 390px, likely due Chrome headless layout viewport behavior; CSS now includes explicit overflow and max-width guards for real narrow browsers.
+- Follow-up desktop screenshot confirms the hero card bottom aligns with the right proof-card stack.

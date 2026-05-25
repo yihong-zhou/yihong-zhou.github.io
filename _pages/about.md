@@ -73,7 +73,7 @@ latest_posts:
       <section class="star-manifesto" aria-label="Research thesis">
         <div class="star-section-label">Research Thesis</div>
         <p>
-          Future power systems will not be operated only by adding more forecasting and control dashboards. They will need a new algorithmic layer that turns millions of uncertain devices, fast AI infrastructure, and local markets into resources that grid operators can trust.
+          Future power systems will not be operated simply by adding more forecasting tools and control dashboards. They will need a new algorithmic layer that turns millions of grid-edge devices and AI-supporting data centres into "grid-intelligent" assets that operators can trust. This ambition forms the foundation of my research.
         </p>
       </section>
 
@@ -218,7 +218,7 @@ latest_posts:
       <section class="star-manifesto" aria-label="研究主线">
         <div class="star-section-label">研究主线</div>
         <p>
-          未来电力系统不能只依赖更多预测和更多控制面板。真正关键的是一层新的算法基础设施：把海量不确定设备、快速变化的 AI 基础设施和本地市场，转化为电网运行者能够信任的灵活性资源。
+          未来电力系统不能只是简单叠加更多预测工具和控制面板。它需要一层新的算法基础设施，把数以百万计的电网边缘设备和支撑 AI 的数据中心，转化为运行者能够信任的“grid-intelligent”资产。这一目标构成了我研究工作的基础。
         </p>
       </section>
 

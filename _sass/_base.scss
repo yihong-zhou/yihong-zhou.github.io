@@ -545,6 +545,7 @@ ul.task-list input[type="checkbox"] {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
+  box-sizing: border-box;
   margin-bottom: 1rem;
   padding: 0.25rem;
   border: 1px solid var(--global-divider-color);
@@ -891,8 +892,11 @@ ul.task-list input[type="checkbox"] {
 
 .star-hero-copy {
   position: relative;
-  min-height: 23rem;
-  padding: 1.55rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+  padding: 1.35rem 1.45rem 1.25rem;
   border: 1px solid color-mix(in srgb, var(--star-navy) 22%, var(--global-divider-color));
   border-radius: 8px;
   background:
@@ -918,7 +922,7 @@ ul.task-list input[type="checkbox"] {
   display: block;
   margin-bottom: 0.42rem;
   color: var(--star-gold);
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 850;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -926,55 +930,66 @@ ul.task-list input[type="checkbox"] {
 
 .star-hero-copy h2 {
   max-width: 46rem;
-  margin: 0 0 1rem;
+  margin: 0 0 0.82rem;
   color: var(--star-ink);
-  font-size: 2.55rem;
-  line-height: 1.03;
+  font-size: 1.86rem;
+  line-height: 1.16;
   letter-spacing: 0;
 }
 
 .star-hero-copy p {
   max-width: 43rem;
-  margin: 0 0 1.2rem;
+  margin: 0 0 1rem;
   color: var(--star-muted);
-  font-size: 1.06rem;
-  line-height: 1.58;
+  font-size: 1rem;
+  line-height: 1.55;
 }
 
 .star-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.1rem;
 }
 
 .star-actions .btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.42rem;
-  min-height: 2.18rem;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.5rem;
+  padding: 0.46rem 0.92rem !important;
   border-radius: 999px;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.1;
 }
 
-.star-primary-action {
+.star-actions .btn i {
+  font-size: 0.95rem;
+}
+
+.star-actions .star-primary-action {
   border-color: var(--star-navy) !important;
-  background: var(--star-navy);
+  background: var(--star-navy) !important;
   color: var(--global-hover-text-color) !important;
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--star-navy) 18%, transparent);
 }
 
-.star-primary-action:hover {
+.star-actions .star-primary-action:hover {
   border-color: var(--global-hover-color) !important;
-  background: var(--global-hover-color);
+  background: var(--global-hover-color) !important;
   color: var(--global-hover-text-color) !important;
 }
 
 .star-hero-proof {
   display: grid;
-  gap: 0.8rem;
+  gap: 0.52rem;
 }
 
 .star-hero-proof div {
-  padding: 1rem;
+  padding: 0.72rem 0.78rem;
   border: 1px solid var(--global-divider-color);
   border-radius: 8px;
   background: var(--global-card-bg-color);
@@ -983,15 +998,15 @@ ul.task-list input[type="checkbox"] {
 
 .star-hero-proof .star-affiliation-card {
   display: grid;
-  grid-template-columns: 3.1rem minmax(0, 1fr);
-  column-gap: 0.75rem;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  column-gap: 0.65rem;
   align-items: center;
 }
 
 .star-affiliation-card img {
   grid-row: span 3;
-  width: 3.1rem;
-  height: 3.1rem;
+  width: 2.5rem;
+  height: 2.5rem;
   padding: 0.22rem;
   border: 1px solid var(--global-divider-color);
   border-radius: 8px;
@@ -1004,7 +1019,7 @@ ul.task-list input[type="checkbox"] {
 .star-evidence-card span {
   display: block;
   color: var(--star-green);
-  font-size: 0.78rem;
+  font-size: 0.92rem;
   font-weight: 850;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -1012,17 +1027,17 @@ ul.task-list input[type="checkbox"] {
 
 .star-hero-proof strong {
   display: block;
-  margin: 0.32rem 0;
+  margin: 0.24rem 0;
   color: var(--star-ink);
-  font-size: 1.03rem;
+  font-size: 0.94rem;
   line-height: 1.25;
 }
 
 .star-hero-proof p {
   margin: 0;
   color: var(--star-muted);
-  font-size: 0.9rem;
-  line-height: 1.48;
+  font-size: 0.82rem;
+  line-height: 1.38;
 }
 
 .star-manifesto {
@@ -1075,8 +1090,12 @@ ul.task-list input[type="checkbox"] {
 
 .star-section-heading {
   display: grid;
-  gap: 0.2rem;
+  gap: 0.08rem;
   margin-bottom: 0.9rem;
+}
+
+.star-section-heading span {
+  margin-bottom: 0.12rem;
 }
 
 .star-section-heading h2,
@@ -1087,6 +1106,12 @@ ul.task-list input[type="checkbox"] {
   font-size: 1.42rem;
   line-height: 1.24;
   letter-spacing: 0;
+}
+
+.post .star-section-heading h2,
+.post .star-leadership h2,
+.post .star-cv-band h2 {
+  margin-top: 0;
 }
 
 .star-evidence-grid {
@@ -1288,13 +1313,53 @@ ul.task-list input[type="checkbox"] {
 }
 
 @media (max-width: 576px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: calc(100vw - 2rem);
+    max-width: calc(100vw - 2rem);
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .post-title {
+    font-size: 2.1rem;
+    line-height: 1.12;
+    overflow-wrap: anywhere;
+  }
+
+  .about-layout,
+  .about-layout .about-main,
+  .language-switch,
+  .language-panels,
+  .lang-panel,
+  .star-home,
+  .star-hero,
+  .star-hero-copy {
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .lang-toggle-labels {
+    display: flex;
     width: 100%;
+    max-width: 100%;
   }
 
   .lang-toggle-labels label {
     flex: 1 1 0;
     justify-content: center;
+    min-width: 0;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: 0.86rem;
+    white-space: nowrap;
+  }
+
+  .lang-toggle-labels label i {
+    flex: 0 0 auto;
   }
 
   .home-hero-panel {
@@ -1319,16 +1384,49 @@ ul.task-list input[type="checkbox"] {
   }
 
   .star-hero-copy {
-    padding: 1.15rem;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem 1rem 1.05rem;
+  }
+
+  .star-hero-copy > * {
+    min-width: 0;
+    max-width: 100%;
   }
 
   .star-hero-copy h2 {
-    font-size: 1.82rem;
+    font-size: 1.28rem;
+    line-height: 1.18;
+    overflow-wrap: anywhere;
   }
 
   .star-hero-copy p,
   .star-manifesto p {
-    font-size: 0.98rem;
+    font-size: 0.94rem;
+    overflow-wrap: anywhere;
+  }
+
+  .home-language-switch,
+  .language-panels,
+  .star-hero,
+  .star-manifesto,
+  .star-proof-strip,
+  .star-section,
+  .star-cv-band {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .star-hero .star-actions .star-primary-action {
+    flex: 1 1 100%;
+  }
+
+  .star-actions .btn {
+    min-width: 0;
+  }
+
+  .star-hero .star-actions .btn:not(.star-primary-action) {
+    flex: 1 1 calc(50% - 0.3rem);
   }
 
   .star-proof-strip,
