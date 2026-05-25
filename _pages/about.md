@@ -42,7 +42,7 @@ latest_posts:
           <div class="star-kicker">Grid intelligence for the AI era</div>
           <h2>Building the control layer for flexible, AI-native power systems.</h2>
           <p>
-            I design optimization and AI methods that make flexible loads dependable enough for real grid operation: probabilistic guarantees, GPU-native computation, and validated AI data-centre response.
+            I design optimization and AI methods that make flexible loads dependable enough for real grid operation, with safety guarantees and accelerator-native computation.
           </p>
           <div class="star-actions">
             <a href="/publications/" class="btn btn-sm z-depth-0 star-primary-action" role="button"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Publications</a>

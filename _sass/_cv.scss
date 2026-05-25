@@ -242,6 +242,25 @@ ul.timeline li::before {
   flex-wrap: wrap;
 }
 
+.cv-page-toolbar .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 2.7rem;
+  padding: 0.55rem 1.05rem !important;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cv-page-toolbar .btn i {
+  font-size: 1.18rem;
+  line-height: 1;
+}
+
 .cv-page-embed {
   width: 100%;
   min-height: 980px;

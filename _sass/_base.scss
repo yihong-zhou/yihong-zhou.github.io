@@ -911,7 +911,7 @@ ul.task-list input[type="checkbox"] {
   position: absolute;
   inset: 0 auto 0 0;
   width: 0.45rem;
-  background: linear-gradient(180deg, var(--star-navy), var(--star-green) 58%, var(--star-gold));
+  background: linear-gradient(180deg, var(--star-navy), var(--star-gold));
 }
 
 .star-kicker,
@@ -1259,11 +1259,10 @@ ul.task-list input[type="checkbox"] {
   align-items: center;
   margin: 1.65rem 0 0.4rem;
   padding: 1.15rem;
-  border: 1px solid color-mix(in srgb, var(--star-navy) 28%, var(--global-divider-color));
+  border: 1px solid var(--global-divider-color);
   border-radius: 8px;
-  background:
-    linear-gradient(135deg, color-mix(in srgb, var(--star-navy) 6%, var(--global-card-bg-color)), color-mix(in srgb, var(--star-green) 5%, var(--global-card-bg-color))),
-    var(--global-card-bg-color);
+  background: var(--global-card-bg-color);
+  box-shadow: var(--global-shadow-soft);
 }
 
 .star-cv-band p {
