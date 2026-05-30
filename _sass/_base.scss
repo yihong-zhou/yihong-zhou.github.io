@@ -3316,7 +3316,7 @@ img.medium-zoom-image--closing {
 
 .publications-index .abbr {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: stretch;
   margin-bottom: 0;
 }
@@ -3330,7 +3330,7 @@ img.medium-zoom-image--closing {
   max-width: 100%;
   height: 20px;
   min-height: 0;
-  margin: 0.36rem 0 0;
+  margin: 0 0 0.36rem;
   padding: 0 0.5rem;
   border-radius: 4px !important;
   background: #bf05b8 !important;
@@ -3501,7 +3501,7 @@ img.medium-zoom-image--closing {
 
   .publications-index ol.bibliography li>.row>.abbr {
     display: flex !important;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .publications-index ol.bibliography li>.row>.col-sm-8 {
