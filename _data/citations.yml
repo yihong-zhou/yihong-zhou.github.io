@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-05-18'
+  last_updated: '2026-06-03'
 papers:
   cY3c6eUAAAAJ:0EnyYjriUFMC:
     citations: 1
     title: Bilevel transmission expansion planning with joint chance-constrained dispatch
     year: '2025'
   cY3c6eUAAAAJ:2osOgNQ5qMEC:
-    citations: 85
+    citations: 86
     title: Robust load forecasting towards adversarial attacks via Bayesian learning
     year: '2022'
   cY3c6eUAAAAJ:3fE2CSJIrl8C:
@@ -50,11 +50,11 @@ papers:
     title: 'GradMAP: Gradient-Based Multi-Agent Proximal Learning for Grid-Edge Flexibility'
     year: '2026'
   cY3c6eUAAAAJ:UebtZRa9Y70C:
-    citations: 17
+    citations: 16
     title: Large language model interface for home energy management systems
     year: '2025'
   cY3c6eUAAAAJ:WF5omc3nYNoC:
-    citations: 10
+    citations: 11
     title: Datasets of Great Britain primary substations integrated with household heating information
     year: '2024'
   cY3c6eUAAAAJ:YOwf2qJgpHMC:
@@ -74,11 +74,11 @@ papers:
     title: Evaluating and comparing the potentials in primary response for GPU and CPU data centers
     year: '2024'
   cY3c6eUAAAAJ:d1gkVwhDpl0C:
-    citations: 6
+    citations: 7
     title: Real-time Optimization Scheduling Strategy for Aggregated Electric Vehicles Supported by Artificial Intelligence Technology
     year: '2020'
   cY3c6eUAAAAJ:eQOLeE2rZwMC:
-    citations: 25
+    citations: 26
     title: Aggregated feasible active power region for distributed energy resources with a distributionally robust joint probabilistic guarantee
     year: '2024'
   cY3c6eUAAAAJ:kNdYIx-mwKoC:
@@ -90,7 +90,7 @@ papers:
     title: Exploiting Data Centres and Local Energy Communities Synergies for Market Participation
     year: '2024'
   cY3c6eUAAAAJ:u-x6o8ySG0sC:
-    citations: 84
+    citations: 87
     title: LSTM-based energy management for electric vehicle charging in commercial-building prosumers
     year: '2021'
   cY3c6eUAAAAJ:u5HHmVD_uO8C:
