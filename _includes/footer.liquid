@@ -1,30 +1,30 @@
-{% capture footer_contents %}
-  &copy; Copyright {{ site.time | date: '%Y' }}
-  {{ site.first_name }}
-  {{ site.middle_name }}
-  {{ site.last_name }}. {{ site.footer_text }}
-  {% if site.impressum_path %}
-    <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
+<footer class="site-footer mt-5" role="contentinfo">
+  {% if site.newsletter.enabled %}
+    {% include newsletter.liquid %}
   {% endif %}
-  {% if site.last_updated %}
-    Last updated: {{ 'now' | date: '%B %d, %Y' }}.
-  {% endif %}
-{% endcapture %}
 
-{% if site.footer_fixed %}
-  <footer class="fixed-bottom" role="contentinfo">
-    <div class="container mt-0">
-      {{ footer_contents }}
+  <div class="container site-footer-inner">
+    <div class="site-footer-intro">
+      <a class="site-footer-brand" href="{{ '/' | relative_url }}">Yihong Zhou <span>周羿宏</span></a>
+      <p>Safe, scalable intelligence for future power systems.</p>
     </div>
-  </footer>
-{% else %}
-  <footer class="sticky-bottom mt-5" role="contentinfo">
-    {% if site.newsletter.enabled %}
-      {% include newsletter.liquid %}
-    {% endif %}
 
-    <div class="container">
-      {{ footer_contents }}
+    <nav class="site-footer-links" aria-label="Contact and profile links">
+      <a href="mailto:{{ site.data.socials.email | encode_email }}">Email</a>
+      <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">Scholar</a>
+      <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/{{ site.data.socials.github_username }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+
+    <div class="site-footer-meta">
+      <span>&copy; {{ site.time | date: '%Y' }} Yihong Zhou</span>
+      <span>Oxford, United Kingdom</span>
+      {% if site.impressum_path %}
+        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>
+      {% endif %}
+      {% if site.last_updated %}
+        <span>Updated {{ 'now' | date: '%B %d, %Y' }}</span>
+      {% endif %}
     </div>
-  </footer>
-{% endif %}
+  </div>
+</footer>

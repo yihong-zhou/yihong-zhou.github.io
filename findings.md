@@ -244,4 +244,94 @@ Audit focused on homepage and adjacent conversion pages:
 - Right-side proof cards were compacted to reduce excess vertical space before Research Thesis.
 - A narrow headless Chrome screenshot still shows cropping at 390px, likely because Chrome command-line layout viewport is wider than the screenshot crop; CSS now includes explicit mobile max-width and overflow guards.
 - Follow-up alignment pass: hero card now stretches to the proof-card stack height, while its content is vertically centered; the left and right card bottoms align cleanly in the wide screenshot.
+
+---
+
+# Findings: Professional Visual System Redesign 2026-07-11
+
+## Initial Context
+- The site already has a custom academic-star homepage, bilingual content, responsive publication cards, and a Talks gallery.
+- Global styling is concentrated in `_sass/_base.scss`; theme tokens live in `_sass/_themes.scss`.
+- Current typography uses Source Sans 3, Merriweather, and IBM Plex Mono.
+- The site fixes both navbar and footer, uses a 1120px content width, and has an existing light/dark theme system.
+- A visual audit of rendered pages is still pending.
+
+## Homepage Audit — Current State
+- The page has a clear research narrative and substantial custom work, but the visual language still resembles a styled template rather than a distinctive editorial identity.
+- The fixed left profile rail makes the main content feel narrow and visually detached from the hero; the portrait is strong but under-integrated.
+- Merriweather adds academic character, but heavy use at multiple levels creates a slightly old-fashioned and visually dense feel.
+- Border-heavy cards and repeated white rectangles flatten hierarchy; premium surfaces need fewer borders, more tonal contrast, and more deliberate depth.
+- The Oxford navy and brass direction is appropriate, but current brass labels and grey text can feel muted rather than confident.
+- Navigation is functional but generic; it lacks a stronger brand mark, active-state treatment, and refined spacing.
+- The fixed footer causes duplication/occlusion artifacts in full-page captures and should become a normal page footer.
+- The homepage proof strip, flagship cards, agenda cards, and leadership block are structurally good candidates for a unified editorial card system.
+
+## Publications and Talks Audit
+- Publications uses strong chronological structure but feels sparse and template-like; the bright magenta venue badges clash with the Oxford-inspired palette.
+- Publication rows need stronger grouping, better metadata hierarchy, a more refined search control, and consistent surface treatment.
+- Talks has good photography and content, but the large bordered feature cards feel heavy; primary and gallery imagery should create hierarchy with less enclosing chrome.
+- Tiny uppercase action buttons on Talks are visually underpowered and inconsistent with homepage CTAs.
+- The fixed footer visibly overlays content on both pages, confirming it should be converted to a normal document-flow footer.
+
+## CV and Collaboration Audit
+- The CV page is functionally strong, but its oversized embedded viewer dominates the visual experience; controls and language switch need to feel like part of the same system.
+- CV actions use heavy uppercase labels that read more like an admin interface than a premium academic site.
+- Collaboration is the weakest core page visually: it is mostly headings and bullet lists with little hierarchy, proof, or invitation to act.
+- Collaboration should become a purposeful landing page with a compact proposition, structured collaboration modes, current focus cards, and a prominent contact CTA.
+- Shared page headers need a consistent editorial treatment so Publications, Talks, CV, Teaching, and Collaboration feel like one authored site.
+
+## Mobile Audit
+- The homepage name wraps awkwardly at 390px, splitting the Chinese name across lines; mobile title sizing and line-breaking need explicit treatment.
+- The portrait occupies most of the initial viewport and delays the research proposition; mobile should use a shorter portrait crop or integrate identity and thesis more tightly.
+- The fixed footer overlays the mobile viewport and visually interrupts content on every page.
+- Collaboration remains readable but becomes a long undifferentiated document; cards and responsive content grouping would materially improve scanning.
+- Mobile navigation needs a stronger brand presence and more polished menu affordance while retaining the current compact footprint.
 - Mobile overflow pass: language toggle labels and hero copy children now have explicit shrink/wrap rules, so real narrow viewports should not inherit desktop intrinsic widths.
+
+## Cross-page Design Audit — Recommended System
+- The strongest existing direction is an Oxford-editorial palette: warm ivory, deep navy, muted brass, serif display type, and restrained sans-serif body text. The redesign should consolidate this direction rather than replace it.
+- Shared page headings need a consistent eyebrow/title/lede system; component headings should not inherit generic article underline decoration.
+- Navigation branding is inconsistent between the homepage and inner pages. A single Yihong Zhou / 周羿宏 identity should be present everywhere.
+- The fixed, dark, template-style footer makes the site feel less bespoke and can cover mobile content. It should become a normal-flow, quiet contact footer.
+- Collaboration is the largest visual gap and needs a value proposition, audience cards, focus areas, outcomes, and a clear contact CTA.
+- Publications already has a strong list structure; its magenta venue labels and cropped research figures are the main inconsistencies.
+- Talks needs an editorial gallery hierarchy rather than equal-weight photo grids, and only the first hero image should load eagerly.
+- CV should foreground a concise summary and actions, with the embedded PDF treated as secondary—especially on mobile.
+- Repeated CSS overrides in `_sass/_base.scss` are a maintenance risk. The redesign should live in one deliberately scoped stylesheet imported last.
+- Social sharing still points to the removed `prof_pic.jpg`; the Open Graph image should use the new portrait.
+
+## First Render of the New System
+- The first production build succeeds in the project Docker environment; only pre-existing Sass and notebook deprecation warnings remain.
+- The new portrait is visibly active and the editorial typography, brass/navy identity, and reduced template chrome are rendering.
+- The initial full-page browser capture appears to be using a constrained layout viewport and reveals horizontal clipping around the homepage hero/title. Viewport geometry and the element causing overflow need to be measured before finalizing.
+- Geometry at 1280px confirms there is no document-level horizontal overflow (`scrollWidth` equals `innerWidth`). The apparent clipping comes from the full-page image renderer, but the homepage name is genuinely wrapping because the shared masthead caps it at 48rem. The About masthead should use the full content width while inner pages retain the narrower editorial measure.
+- After widening only the About masthead, the full bilingual name fits cleanly at 1280px. The settled first viewport now reads as a coherent hierarchy: global identity, editorial nameplate, new portrait, language control, research proposition, and proof rail.
+- The site retains a short inherited page-load fade, so screenshots taken immediately after reload appear washed out; after 1.8 seconds the final contrast and colors are correct.
+- The in-app browser accepted the 390×844 mobile viewport but timed out while capturing the first screenshot. Mobile geometry and content checks should continue independently of that capture failure.
+- A follow-up geometry read showed the viewport was still 1280px, so the first viewport override used the wrong payload shape rather than exposing a responsive-layout defect.
+- The viewport control accepts the documented width/height payload but the current in-app browser session remains at 1280×720—even in a newly opened tab. Mobile validation therefore needs a headless browser fallback or static breakpoint inspection.
+- The viewport override takes effect after a subsequent navigation: responsive QA is now running at a real 390×844 viewport with `scrollWidth` exactly 390px.
+- Mobile homepage composition is strong: the bilingual name wraps as a deliberate two-line lockup, the portrait becomes a compact identity card, and the research hero begins within the first screen. The mobile brand copy is slightly clipped and needs a small size/width correction.
+- Collaboration stacks cleanly on mobile, but its dark “Current frontier” panel needs an explicit light color on the `strong` heading because a global strong-text rule is winning the cascade.
+- Mobile brand geometry confirms the full “Yihong Zhou” text fits; the screenshot’s apparent truncation is antialiasing at preview scale rather than overflow.
+- Publications is clean and fully contained at 390px. The Scholar/search toolbar stacks naturally, the navy venue badge now belongs to the palette, and year/paper hierarchy remains readable without turning each item into a floating card.
+- Talks has a strong mobile opening with a full-width event photograph and editorial event title. Non-featured Bootstrap rows retain a 3px negative margin, creating a small 393px document width; mobile overrides should zero all Talk row margins and column side padding.
+- The Talks mobile screenshot rendered the fixed-nav strip as black even though computed light-theme styles, position, and geometry are correct; this appears to be a capture artifact rather than page state.
+- Teaching is fully contained at 390px and the redesigned timeline now communicates institution, period, supervision scale, lab contribution, and recognition in a scan-friendly order.
+- CV is fully contained at 390px; the summary, bilingual control, and primary PDF actions remain visible while the browser-style iframe is correctly suppressed in favor of a mobile reading note.
+- Rebuilt Collaboration now has 390px containment and explicit ivory text in its dark frontier panel; the light-theme first viewport passes visual contrast review.
+- The theme toggle is inside the collapsed mobile navigation, so direct clicking correctly times out while the menu is closed. Dark-mode QA must open the hamburger first.
+- The responsive navigation button is present in the accessibility tree with an appropriate “Toggle navigation” label, but two locator clicks timed out in the current browser transport. The page’s landmark and heading structure itself is clean in the DOM snapshot.
+- Browser-side evaluation is intentionally read-only in this environment, so dark-theme attributes cannot be forced for QA. Coordinate interaction is the remaining safe fallback for opening the mobile menu and using the real theme control.
+- Coordinate interaction successfully opened the real mobile menu. Accessibility geometry is correct, but the active Collaboration link has white text on a transparent background because the theme’s more-specific `background-color: inherit` rule beats the new CTA background; the active CTA background needs `!important` or matching specificity.
+- The real theme control cycles System → Light → Dark as intended. In dark mode, computed contrast values are correct: body text becomes light, cards become `rgb(26,36,48)`, the primary CTA becomes brass with dark text, and the frontier title remains ivory.
+- As with earlier reload captures, the screenshot compositor can lag behind the computed theme state; dark-mode acceptance should rely on both a settled capture and computed colors.
+- A settled dark-theme capture confirms the final visual state: navy-black surfaces, readable light text, brass primary CTA, and ivory frontier heading all have clear contrast.
+- After the final rebuild, the active Collaboration navigation pill now has the intended navy background and white text; the mobile menu remains exactly 390px wide with no overflow.
+- Final Talks geometry shows every tested row aligned to the 366px content column and the document width fixed at 390px; the previous 3px negative-margin overflow is resolved.
+- The browser’s element-screenshot helper requires coordinates rather than a selector, so footer review should use a bottom-of-page scroll plus a normal viewport capture.
+- The semantic locator API has no scroll-into-view method in this browser binding; footer visual review will use the coordinate scroll capability.
+- Coordinate scrolling works with `scrollX`/`scrollY` payload keys. The first large scroll confirmed the footer remains static and below the Talks content; one final downward scroll is needed to bring it into the viewport.
+- Final footer review passes in dark mode: the normal-flow footer has clear identity, contact links, location, and copyright, with no overlap against the last Talk entry.
+- The browser was returned to System theme (currently light), the viewport override was reset, and the main preview was returned to the homepage.
+- The generated main stylesheet URL still used the constant `d41d8cd…` empty-file hash, which could leave returning visitors on stale CSS after deployment. The main stylesheet now uses the Jekyll build timestamp as its version query so every deployment invalidates the browser cache.

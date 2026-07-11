@@ -2,7 +2,8 @@
 layout: page
 title: Talks
 permalink: /talks/
-description: Talks, panels, and workshop organisation.
+eyebrow: Talks & engagement
+description: Selected talks, panels, conference presentations, and workshops connecting research with practice.
 nav: true
 nav_order: 4
 ---
@@ -11,7 +12,7 @@ nav_order: 4
 
 <div class="row talk-entry talk-entry-featured">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/events/2026-lcaw-talk-1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="eager" path="assets/img/events/2026-lcaw-talk-1.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Yihong Zhou presenting research on grid-intelligent AI data centres at London Climate Action Week" %}
   </div>
   <div class="col-sm-8">
     <h5>AI Data Centres: Power Burden or Future Grid Flexibility Backbone?</h5>
@@ -27,15 +28,15 @@ nav_order: 4
     </div>
   </div>
   <div class="col-12 talk-gallery" aria-label="London Climate Action Week panel photo gallery">
-    {% include figure.liquid loading="lazy" path="assets/img/events/2026-lcaw-panel.jpg" class="img-fluid rounded" zoomable=true %}
-    {% include figure.liquid loading="lazy" path="assets/img/events/2026-lcaw-talk-2.jpg" class="img-fluid rounded" zoomable=true %}
-    {% include figure.liquid loading="lazy" path="assets/img/events/2026-lcaw-talk-3.jpg" class="img-fluid rounded" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-lcaw-panel.jpg" class="img-fluid rounded" zoomable=true alt="London Climate Action Week panel discussion at the ZERO Institute" %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-lcaw-talk-2.jpg" class="img-fluid rounded" zoomable=true alt="Yihong Zhou speaking during the AI data centres panel" %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-lcaw-talk-3.jpg" class="img-fluid rounded" zoomable=true alt="Yihong Zhou explaining data-centre power demand and flexibility" %}
   </div>
 </div>
 
 <div class="row talk-entry talk-entry-featured">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/events/2026-pscc-talk-1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-talk-1.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Yihong Zhou presenting supervised reinforcement learning for distributed energy resources at PSCC 2026" %}
   </div>
   <div class="col-sm-8">
     <h5>XXIV Power Systems Computation Conference (PSCC 2026)</h5>
@@ -49,18 +50,18 @@ nav_order: 4
     </div>
   </div>
   <div class="col-12 talk-gallery talk-gallery-wide" aria-label="PSCC 2026 photo gallery">
-    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-talk-2.jpg" class="img-fluid rounded" zoomable=true %}
-    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-talk-3.jpg" class="img-fluid rounded" zoomable=true %}
-    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-social-1.jpg" class="img-fluid rounded" zoomable=true %}
-    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-social-2.jpg" class="img-fluid rounded" zoomable=true %}
-    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-social-3.jpg" class="img-fluid rounded" zoomable=true %}
-    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-social-4.jpg" class="img-fluid rounded" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-talk-2.jpg" class="img-fluid rounded" zoomable=true alt="PSCC 2026 technical presentation" %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-talk-3.jpg" class="img-fluid rounded" zoomable=true alt="Yihong Zhou presenting at PSCC 2026 in Limassol" %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-social-1.jpg" class="img-fluid rounded" zoomable=true alt="PSCC 2026 conference dinner" %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-social-2.jpg" class="img-fluid rounded" zoomable=true alt="PSCC 2026 conference celebration" %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-social-3.jpg" class="img-fluid rounded" zoomable=true alt="PSCC 2026 conference social event" %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-social-4.jpg" class="img-fluid rounded" zoomable=true alt="Yihong Zhou with colleagues at the PSCC 2026 dinner" %}
   </div>
 </div>
 
 <div class="row talk-entry">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/202602FlexEdge.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/202602FlexEdge.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="FleXEdge project workshop at the University of Oxford" %}
   </div>
   <div class="col-sm-8">
     <h5>FleXEdge Project Workshop (Kick-off)</h5>
@@ -73,7 +74,7 @@ nav_order: 4
 
 <div class="row talk-entry">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/2026pesimpanel.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/2026pesimpanel.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Panel on electricity markets and AI at the IEEE PES International Meeting" %}
   </div>
   <div class="col-sm-8">
     <h5>Panel 4.5: Reinventing Future Electricity Markets with AI (IEEE PES International Meeting)</h5>
@@ -92,7 +93,7 @@ nav_order: 4
 
 <div class="row talk-entry">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/2025exeter.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/2025exeter.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Research presentation at the University of Exeter" %}
   </div>
   <div class="col-sm-8">
     <h5>GW4 Exeter Workshop</h5>
@@ -105,7 +106,7 @@ nav_order: 4
 
 <div class="row talk-entry">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/2025sageflex_workshop.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/2025sageflex_workshop.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="SAGEflex workshop at the University of Oxford" %}
   </div>
   <div class="col-sm-8">
     <h5>Oxford Workshop on Safeguarded AI Agents</h5>
@@ -118,7 +119,7 @@ nav_order: 4
 
 <div class="row talk-entry">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/2025ncepu.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/2025ncepu.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Academic talk at North China Electric Power University" %}
   </div>
   <div class="col-sm-8">
     <h5>Seminar: Towards Real-World, Computationally Affordable Reformulation of Uncertainty-Aware Power System Optimisation</h5>
@@ -137,7 +138,7 @@ nav_order: 4
 
 <div class="row talk-entry">
   <div class="col-sm-4">
-    {% include figure.liquid loading="eager" path="assets/img/2024pscc.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/2024pscc.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Presentation at the Power Systems Computation Conference 2024" %}
   </div>
   <div class="col-sm-8">
     <h5>Power Systems Computation Conference (PSCC)</h5>

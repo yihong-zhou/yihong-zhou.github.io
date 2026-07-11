@@ -4,8 +4,15 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 5
-description: Curriculum Vitae.
+eyebrow: Curriculum vitae
+description: Academic CV · Updated July 2026.
 ---
+
+<div class="cv-summary" aria-label="CV summary">
+  <div><span>Current role</span><strong>Postdoctoral Research Associate</strong><p>University of Oxford</p></div>
+  <div><span>Research</span><strong>Power systems × AI</strong><p>Safe optimization and grid flexibility</p></div>
+  <div><span>Documents</span><strong>English & 中文</strong><p>Open, download, or inspect the source</p></div>
+</div>
 
 <div class="cv-page-shell language-switch">
   <input class="lang-toggle-input" type="radio" name="cv-lang" id="cv-lang-en" checked>
@@ -22,10 +29,12 @@ description: Curriculum Vitae.
         <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_en.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
         <a class="btn btn-sm z-depth-0" href="https://github.com/yihong-zhou/Yihong-Zhou-CV/blob/main/main.tex" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code" aria-hidden="true"></i> TeX Source</a>
       </div>
+      <p class="cv-mobile-note">Open or download the PDF for the best reading experience on a smaller screen.</p>
       <iframe
         class="cv-page-embed"
         src="/assets/pdf/Yihong_Zhou_CV_en.pdf#view=FitH"
         title="Yihong Zhou English CV"
+        loading="lazy"
       ></iframe>
     </section>
 
@@ -35,10 +44,12 @@ description: Curriculum Vitae.
         <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_zh.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> 下载</a>
         <a class="btn btn-sm z-depth-0" href="https://github.com/yihong-zhou/Yihong-Zhou-CV/blob/main/Chinese.tex" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code" aria-hidden="true"></i> TeX 源码</a>
       </div>
+      <p class="cv-mobile-note">在小屏幕上，请打开或下载 PDF 以获得最佳阅读体验。</p>
       <iframe
         class="cv-page-embed"
         src="/assets/pdf/Yihong_Zhou_CV_zh.pdf#view=FitH"
         title="Yihong Zhou Chinese CV"
+        loading="lazy"
       ></iframe>
     </section>
   </div>
