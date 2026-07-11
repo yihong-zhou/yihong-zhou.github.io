@@ -9,6 +9,55 @@ nav_order: 4
 
 <h3 class="year">2026</h3>
 
+<div class="row talk-entry talk-entry-featured">
+  <div class="col-sm-4">
+    {% include figure.liquid loading="eager" path="assets/img/events/2026-lcaw-talk-1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
+  <div class="col-sm-8">
+    <h5>AI Data Centres: Power Burden or Future Grid Flexibility Backbone?</h5>
+    <p class="talk-meta"><strong>Role:</strong> Speaker and Panelist | <strong>Event:</strong> London Climate Action Week | <strong>Location:</strong> The ZERO Institute, University of Oxford</p>
+    <p>
+      I presented our latest research on data-centre grid intelligence and compute flexibility in a panel chaired by Prof. Thomas Morstyn. The discussion brought together Vince Colby (Pure Data Centres Group), Frederik Drewes (Loadwise), and Ethan Tiao (Emerald AI), connecting academic research with data-centre operations and flexibility demonstrations.
+    </p>
+    <p>
+      The Q&amp;A covered grid-balancing cost allocation, data-centre water use, flexible grid connections, and how compute flexibility could help bring resilient digital infrastructure to developing regions.
+    </p>
+    <div class="talk-links">
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7477665115207606272/" class="btn btn-sm z-depth-0" role="button">Event Post</a>
+    </div>
+  </div>
+  <div class="col-12 talk-gallery" aria-label="London Climate Action Week panel photo gallery">
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-lcaw-panel.jpg" class="img-fluid rounded" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-lcaw-talk-2.jpg" class="img-fluid rounded" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-lcaw-talk-3.jpg" class="img-fluid rounded" zoomable=true %}
+  </div>
+</div>
+
+<div class="row talk-entry talk-entry-featured">
+  <div class="col-sm-4">
+    {% include figure.liquid loading="eager" path="assets/img/events/2026-pscc-talk-1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
+  <div class="col-sm-8">
+    <h5>XXIV Power Systems Computation Conference (PSCC 2026)</h5>
+    <p class="talk-meta"><strong>Role:</strong> Presenter | <strong>Date:</strong> 8–12 June 2026 | <strong>Location:</strong> Limassol, Cyprus</p>
+    <p>
+      I presented our work on <em>Supervised Reinforcement Learning for the Coordination of Distributed Energy Resources</em>, connecting supervised pre-training and reinforcement-learning fine-tuning for more efficient and robust DER coordination. The conference also provided a great opportunity to exchange ideas with the international power-systems computation community.
+    </p>
+    <div class="talk-links">
+      <a href="https://pscc2026.cy/" class="btn btn-sm z-depth-0" role="button">Conference Website</a>
+      <a href="https://arxiv.org/abs/2606.24947" class="btn btn-sm z-depth-0" role="button">Paper</a>
+    </div>
+  </div>
+  <div class="col-12 talk-gallery talk-gallery-wide" aria-label="PSCC 2026 photo gallery">
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-talk-2.jpg" class="img-fluid rounded" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-talk-3.jpg" class="img-fluid rounded" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-social-1.jpg" class="img-fluid rounded" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-social-2.jpg" class="img-fluid rounded" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-social-3.jpg" class="img-fluid rounded" zoomable=true %}
+    {% include figure.liquid loading="lazy" path="assets/img/events/2026-pscc-social-4.jpg" class="img-fluid rounded" zoomable=true %}
+  </div>
+</div>
+
 <div class="row talk-entry">
   <div class="col-sm-4">
     {% include figure.liquid loading="eager" path="assets/img/202602FlexEdge.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}

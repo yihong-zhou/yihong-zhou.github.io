@@ -6,7 +6,7 @@ subtitle: <a href='https://www.ox.ac.uk/'>University of Oxford</a>, Oxford, UK.
 
 profile:
   align: left
-  image: prof_pic.jpg
+  image: portrait2026.jpg
   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>555 your office number</p>
@@ -91,8 +91,8 @@ latest_posts:
           <p>GPU-accelerated batched power-flow speedups</p>
         </div>
         <div>
-          <span>2</span>
-          <p>2026 IEEE special sessions chaired</p>
+          <span>343</span>
+          <p>Google Scholar citations</p>
         </div>
       </section>
 
@@ -159,6 +159,8 @@ latest_posts:
           <h2>Active in the emerging AI-for-energy community.</h2>
         </div>
         <ul>
+          <li>Speaker and panelist, London Climate Action Week 2026, Oxford.</li>
+          <li>Presenter, Power Systems Computation Conference 2026, Limassol.</li>
           <li>Panelist, IEEE PES International Meeting 2026, Hong Kong.</li>
           <li>Special Session Chair, IEEE I&CPS Asia 2026, Kunming.</li>
           <li>Special Session Chair, IEEE EI<sup>2</sup> 2026, Shanghai.</li>
@@ -236,8 +238,8 @@ latest_posts:
           <p>GPU 批量潮流计算加速</p>
         </div>
         <div>
-          <span>2</span>
-          <p>2026 IEEE special session chair</p>
+          <span>343</span>
+          <p>Google Scholar 引用</p>
         </div>
       </section>
 
@@ -304,6 +306,8 @@ latest_posts:
           <h2>积极参与 AI for Energy 新兴学术社区。</h2>
         </div>
         <ul>
+          <li>London Climate Action Week 2026 演讲嘉宾与圆桌嘉宾，牛津。</li>
+          <li>Power Systems Computation Conference 2026 报告人，利马索尔。</li>
           <li>IEEE PES International Meeting 2026 圆桌嘉宾，香港。</li>
           <li>IEEE I&CPS Asia 2026 Special Session Chair，昆明。</li>
           <li>IEEE EI<sup>2</sup> 2026 Special Session Chair，上海。</li>

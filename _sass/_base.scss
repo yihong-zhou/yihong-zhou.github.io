@@ -3002,6 +3002,42 @@ img.medium-zoom-image--closing {
   flex-wrap: wrap;
 }
 
+.talk-entry-featured {
+  padding: 1.15rem 0.35rem 1.35rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 16px;
+  background: var(--global-card-bg-color);
+  box-shadow: var(--global-shadow-soft);
+}
+
+.talk-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.talk-gallery figure,
+.talk-gallery picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.talk-gallery img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border: 1px solid var(--global-divider-color);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--global-shadow-color) 78%, transparent);
+}
+
+.talk-gallery-wide {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 @media (max-width: 576px) {
   .talk-entry {
     padding: 0.6rem 0;
@@ -3013,6 +3049,15 @@ img.medium-zoom-image--closing {
 
   .talk-entry .col-sm-4 img {
     height: 180px;
+  }
+
+  .talk-gallery,
+  .talk-gallery-wide {
+    grid-template-columns: 1fr;
+  }
+
+  .talk-gallery img {
+    height: 240px;
   }
 }
 

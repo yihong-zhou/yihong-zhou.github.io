@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-08'
+  last_updated: '2026-07-11'
 papers:
   cY3c6eUAAAAJ:0EnyYjriUFMC:
     citations: 1
@@ -22,11 +22,11 @@ papers:
     title: Decision-focused Learning for Local Energy Communities Management Under Uncertainty
     year: Unknown Year
   cY3c6eUAAAAJ:8k81kl-MbHgC:
-    citations: 2
+    citations: 3
     title: 'FICA: Faster Inner Convex Approximation of Chance Constrained Grid Dispatch with Decision-Coupled Uncertainty'
     year: '2025'
   cY3c6eUAAAAJ:9yKSN-GCB0IC:
-    citations: 36
+    citations: 37
     title: Flexibility prediction of aggregated electric vehicles and domestic hot water systems in smart grids
     year: '2021'
   cY3c6eUAAAAJ:IjCSPb-OGe4C:
@@ -38,7 +38,7 @@ papers:
     title: Independent aggregators securing end user Wasserstein distributionally robust flexibility through bilevel incentives
     year: '2026'
   cY3c6eUAAAAJ:LkGwnXOMwfcC:
-    citations: 12
+    citations: 13
     title: Ai-focused hpc data centers can provide more power grid flexibility and at lower cost
     year: '2024'
   cY3c6eUAAAAJ:M3ejUd6NZC8C:
@@ -74,7 +74,7 @@ papers:
     title: Assessment of options for a smart, resilient and low-carbon multi-vector energy system in the Scottish Borders
     year: '2023'
   cY3c6eUAAAAJ:Zph67rFs4hoC:
-    citations: 0
+    citations: 1
     title: Grid-Intelligent AI Data Centres for Primary Response
     year: '2026'
   cY3c6eUAAAAJ:_FxGoFyzp5QC:
@@ -113,3 +113,7 @@ papers:
     citations: 11
     title: A novel surrogate polytope method for day-ahead virtual power plant scheduling with joint probabilistic constraints
     year: '2024'
+  cY3c6eUAAAAJ:qxL8FJ1GzNcC:
+    citations: 0
+    title: Decision-Focused Scenario Generation and Selection for Efficient and Robust Grid Dispatch
+    year: '2026'
