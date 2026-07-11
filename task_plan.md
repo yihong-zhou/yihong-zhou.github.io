@@ -216,6 +216,55 @@ Phase 3
 - [x] Identify high-impact layout fixes beyond the reported screenshot
 - **Status:** complete
 
+---
+
+# Task Plan: Professional Visual System Redesign (2026-07-11)
+
+## Goal
+Elevate the entire academic website so it feels more professional, refined, and visually distinctive while preserving speed, accessibility, bilingual content, and the existing academic information architecture.
+
+## Current Phase
+Complete
+
+## Phases
+### Phase 1: Visual and Structural Audit
+- [x] Inspect the rendered homepage, publications, talks, CV, and collaboration pages at desktop and mobile widths
+- [x] Audit typography, color, spacing, navigation, cards, imagery, and hierarchy
+- [x] Identify the smallest coherent visual system that improves the whole site
+- **Status:** complete
+
+### Phase 2: Design System Implementation
+- [x] Refine the global palette, typography, page background, navigation, footer, buttons, links, and containers
+- [x] Redesign shared page headers and card surfaces
+- [x] Improve homepage hero, proof strip, flagship work, agenda, leadership, and news presentation
+- [x] Improve publications, talks, CV, and collaboration page consistency
+- **Status:** complete
+
+### Phase 3: Responsive and Accessibility Pass
+- [x] Verify desktop, tablet, and mobile layouts
+- [x] Check contrast, focus states, motion preferences, image cropping, and text overflow
+- **Status:** complete
+
+### Phase 4: Build and Visual QA
+- [x] Run the full Jekyll build
+- [x] Inspect final rendered pages and iterate on defects
+- [x] Confirm no unintended source or generated-file changes
+- **Status:** complete
+
+## Design Principles
+- Academic authority before decoration
+- Editorial restraint, generous spacing, and precise alignment
+- Warm Oxford-inspired neutrals with restrained blue and brass accents
+- Strong typographic hierarchy and quieter supporting metadata
+- Photography and publication visuals used intentionally, not ornamentally
+
+## Errors Encountered
+| Error | Attempt | Resolution |
+|-------|---------|------------|
+| Host Bundler 4.0.4 unavailable | 1 | Used the repository's Docker build environment |
+| In-app screenshot compositor briefly lagged theme transitions | 1 | Waited for settled state and verified computed colors |
+| HTMLProofer executable unavailable in image | 1 | Ran a Nokogiri-based generated-site local link and asset check |
+
 ### Phase 2: Implementation
 - [x] Tighten hero panel spacing and height
 - [x] Restore CTA button size/weight and hierarchy

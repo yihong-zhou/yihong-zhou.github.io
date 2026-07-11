@@ -244,3 +244,32 @@ Fix visual balance issues on the redesigned homepage after user feedback: oversi
 - Full-height desktop screenshot shows Research Thesis, proof strip, flagship work, agenda, leadership, and CV sections maintain coherent spacing.
 - Narrow headless Chrome screenshot still appears cropped at 390px, likely due Chrome headless layout viewport behavior; CSS now includes explicit overflow and max-width guards for real narrow browsers.
 - Follow-up desktop screenshot confirms the hero card bottom aligns with the right proof-card stack.
+
+---
+
+## Session Update: Professional Visual System Redesign 2026-07-11
+
+### Objective
+Raise the website's overall professionalism, material quality, and aesthetic coherence across all core pages.
+
+### Actions Started
+- Created a four-phase redesign plan.
+- Identified the global theme, typography, layout, and shared-component files.
+- Prepared a rendered-page audit covering desktop and mobile.
+
+### Actions Completed
+- Completed the desktop and mobile audit for the homepage, Publications, Talks, Teaching, CV, and Collaboration.
+- Added one final-layer editorial stylesheet rather than extending the fragmented base stylesheet.
+- Added consistent YZ branding, a restrained contact footer, shared page eyebrows, and an updated favicon/social preview image.
+- Rebuilt Collaboration as a focused landing page and upgraded Teaching and CV information hierarchy.
+- Refined publication controls, venue styling, research-figure treatment, Talks image loading, and descriptive alt text.
+
+### Verification Completed
+- Docker production build passes; remaining output is limited to pre-existing Sass and notebook deprecation warnings.
+- Core pages were visually reviewed at 1280px and a real 390×844 viewport in light and dark themes.
+- Mobile document widths are contained; the Talks negative-margin overflow was found and fixed.
+- Navigation, Collaboration CTAs, footer flow, publication search, CV mobile treatment, and theme contrast were verified in the rendered site.
+- A generated-site local link and asset check passes across all HTML files.
+- `git diff --check` reports no whitespace errors.
+- Final review fixes add visible keyboard focus to both language switches and improve the dark-theme Collaboration navigation contrast.
+- Replaced the broken constant main-CSS cache key with a per-build timestamp, ensuring the redesign is fetched immediately after deployment.

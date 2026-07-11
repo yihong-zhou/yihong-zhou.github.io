@@ -11,35 +11,35 @@ ninja.data = [{
     },
   },{id: "nav-publications",
           title: "Publications",
-          description: "Publications by categories in reversed chronological order.",
+          description: "Peer-reviewed work and preprints across power systems, optimization, and artificial intelligence.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
           },
         },{id: "nav-teaching",
           title: "Teaching",
-          description: "Teaching assistantships and supervision.",
+          description: "Postgraduate supervision, lab stewardship, and hands-on teaching in AI and smart grids.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
           },
         },{id: "nav-talks",
           title: "Talks",
-          description: "Talks, panels, and workshop organisation.",
+          description: "Selected talks, panels, conference presentations, and workshops connecting research with practice.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/talks/";
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "Curriculum Vitae.",
+          description: "Academic CV · Updated July 2026.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
           },
         },{id: "nav-collaboration",
           title: "Collaboration",
-          description: "Collaboration opportunities in safe and scalable AI for power systems.",
+          description: "Academic and industry partnerships in safe, scalable decision-making for future power systems.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/collaboration/";
