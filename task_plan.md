@@ -133,7 +133,7 @@ Phase 5
 Convert the imported CV source into a real Git submodule pointing at `yihong-zhou/Yihong-Zhou-CV.git`, then add a GitHub Action that can update the submodule, compile English/Chinese PDFs, and commit refreshed PDF assets back to the homepage repository.
 
 ## Current Phase
-Phase 4
+Complete
 
 ## Phases
 ### Phase 1: Discovery
@@ -207,7 +207,7 @@ Complete
 Review the current generated homepage layout as a whole and fix obvious visual balance problems, especially the oversized/empty hero panel and underpowered CTA buttons.
 
 ## Current Phase
-Phase 3
+Complete
 
 ## Phases
 ### Phase 1: Visual Audit
@@ -238,6 +238,58 @@ Complete
 - [x] Redesign shared page headers and card surfaces
 - [x] Improve homepage hero, proof strip, flagship work, agenda, leadership, and news presentation
 - [x] Improve publications, talks, CV, and collaboration page consistency
+
+---
+
+# Task Plan: Publication Preview Images (2026-07-14)
+
+## Goal
+Add accurate, polished preview images for the three newest publication entries that currently have no `preview` asset.
+
+## Current Phase
+Phase 4
+
+## Phases
+### Phase 1: Identify and Source
+- [x] Identify the three newest bibliography entries without previews
+- [x] Locate authoritative paper pages and downloadable manuscripts
+- **Status:** complete
+
+### Phase 2: Select and Produce Previews
+- [x] Render the relevant PDF pages
+- [x] Select a representative contribution figure for each paper
+- [x] Crop and export consistent PNG previews
+- **Status:** complete
+
+### Phase 3: Integrate
+- [x] Add `preview` fields to the bibliography
+- [x] Confirm the generated Publications page references all three assets
+- **Status:** complete
+
+### Phase 4: Verify
+- [x] Build the Jekyll site
+- [x] Visually inspect desktop and mobile Publications layouts
+- [x] Check for missing assets and horizontal overflow
+- **Status:** complete
+
+## Target Entries
+- `deng2026supervised` — arXiv:2606.24947
+- `zhou2026decisionfocused` — arXiv:2607.05830
+- `paredes2027optimal` — Electric Power Systems Research 262, 113693
+
+## Decisions Made
+| Decision | Rationale |
+|----------|-----------|
+| Use figures from the authors' paper PDFs | Keeps previews faithful to the research rather than using generic decoration |
+| Match the existing `publication_preview/*.png` convention | Avoids template changes and keeps the visual system consistent |
+
+## Errors Encountered
+| Error | Attempt | Resolution |
+|-------|---------|------------|
+| Combined planning-file update used a non-unique `Current Phase` anchor | 1 | Re-applied with the publication-task heading as the patch context |
+| `pdftotext` is unavailable in the host shell | 1 | Use the bundled Python PDF libraries for caption discovery; keep Poppler `pdfinfo`/`pdftoppm` for rendering |
+| ImageMagick `identify` is unavailable in the host shell | 1 | Use macOS `sips` for dimensions and the bundled image libraries only where needed for deterministic crops |
+| Initial `sips --cropOffset` crops clipped diagram labels | 1 | Switch to exact pixel-coordinate cropping with bundled Pillow, then re-inspect every output |
 - **Status:** complete
 
 ### Phase 3: Responsive and Accessibility Pass
@@ -276,3 +328,44 @@ Complete
 - [x] Confirm generated HTML/CSS reflect layout fixes
 - [x] Summarize remaining caveats
 - **Status:** complete
+
+---
+
+# Task Plan: Talks Zoom Distortion (2026-07-14)
+
+## Goal
+Reproduce and fix the production-only image distortion that appears after opening Talks photographs in the zoom overlay.
+
+## Current Phase
+Phase 3
+
+## Phases
+### Phase 1: Reproduce and Diagnose
+- [x] Inspect the deployed Talks page and trigger image zoom
+- [x] Compare deployed CSS, image geometry, and zoom overlay state with local source
+- **Status:** completed
+
+### Phase 2: Implement
+- [x] Apply the smallest scoped fix to zoomed Talks images
+- [x] Preserve normal gallery card cropping and other page zoom behaviour
+- **Status:** completed
+
+### Phase 3: Verify
+- [x] Build locally
+- [x] Test closed/open zoom geometry at desktop and mobile widths
+- [x] Confirm no horizontal overflow or regression on Publications images
+- **Status:** completed
+
+## Decisions Made
+| Decision | Rationale |
+|----------|-----------|
+| Reproduce against the deployed URL first | The defect is production-only according to the user, so live computed geometry is the authoritative starting point |
+| Scope the safeguard to `data-zoomable` images only while medium-zoom is opening/opened/closing | Preserve all thumbnail crops while preventing aspect-ratio distortion in the detached overlay image on any page |
+
+## Errors Encountered
+| Error | Attempt | Resolution |
+|-------|---------|------------|
+| Live zoom-state screenshot timed out in the in-app browser | 1 | Use targeted DOM geometry and inline-style inspection instead of repeating the same capture |
+| Mobile featured-image locator click timed out in the browser transport | 2 | Target load/viewport geometry is valid; switch to the real coordinate interaction capability against the measured visible image |
+| Alternative mobile CSS-locator click stalled and reset the browser kernel | 1 | Stop retrying the unstable transport; retain the captured 390px geometry/style evidence and finish with generated-site regression checks |
+| First inline generated-asset checker had a shell quoting parse error | 1 | Simplify the checker to the generated HTML's double-quoted attributes and rerun |
