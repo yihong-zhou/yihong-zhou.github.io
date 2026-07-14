@@ -781,7 +781,7 @@ a.btn:hover,
 .star-cv-band {
   gap: 2rem;
   margin: clamp(2.5rem, 5vw, 4rem) 0 0;
-  padding: 1.65rem 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 3.5vw, 3.25rem);
   border-top: 1px solid var(--global-divider-color);
   border-bottom: 1px solid var(--global-divider-color);
   border-radius: 0;
@@ -869,7 +869,7 @@ a.btn:hover,
 .publications-index .abbr figure.preview img {
   padding: 0.35rem;
   background: #fff;
-  object-fit: contain;
+  object-fit: contain !important;
 }
 
 .publications-index .title {
@@ -988,6 +988,15 @@ a.btn:hover,
   border: 0;
   border-radius: var(--editorial-radius) !important;
   box-shadow: none;
+}
+
+// Medium Zoom reparents the active image under <body> while retaining the
+// thumbnail box dimensions. Keep the pixels at their intrinsic ratio inside
+// that box so fixed-height Talk crops cannot stretch in the overlay.
+img[data-zoomable].medium-zoom-image--opening,
+img[data-zoomable].medium-zoom-image--opened,
+img[data-zoomable].medium-zoom-image--closing {
+  object-fit: contain !important;
 }
 
 /* Teaching */

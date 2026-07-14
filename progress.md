@@ -220,6 +220,62 @@ Make the homepage feel more focused, ambitious, and visually polished, with a cl
 
 ---
 
+## Session Update: Publication Preview Images (2026-07-14)
+
+### Objective
+Source and add representative images for the three newest papers on the Publications page.
+
+### Actions Started
+- Audited `_bibliography/papers.bib` and `assets/img/publication_preview/`.
+- Identified the three missing preview assets and their available source metadata.
+- Located authoritative arXiv manuscripts for the first two papers and an open-access institutional copy plus DOI for the EPSR paper.
+- Downloaded and validated all three manuscripts under `tmp/pdfs/`.
+- Extracted figure captions and selected the overview-method pages for visual review: page 4, page 4, and page 3 respectively.
+- Rendered those pages at 180 DPI and visually confirmed one overview-method figure per paper for the final previews.
+- Generated first crops; visual QA rejected two for clipped labels and flagged the third for a tight caption edge. Moving to deterministic pixel-coordinate crops.
+- The exact-coordinate pass clarified the true figure extents. Decided to exclude printed figure captions from all three previews for a cleaner and more consistent card treatment.
+- Produced three clean diagram-only PNG previews and added their `preview` fields to `_bibliography/papers.bib`.
+- Built the site and confirmed all three assets appear in generated Publications HTML and load in-browser. Found one final CSS issue: the live thumbnail rule still computes to `object-fit: cover`.
+- Strengthened the editorial publication-image rule so diagram previews use `contain` and cannot be cropped by the inherited thumbnail style.
+
+### Verification Completed
+- Jekyll production build passes; remaining output is limited to the existing Sass/nbconvert warnings.
+- Generated Publications HTML references all three new PNG assets.
+- Desktop and mobile browser checks confirm successful loading, full-diagram `contain` rendering, and zero horizontal overflow.
+- Removed downloaded manuscripts and rendered-page intermediates from `tmp/pdfs/`; only the three optimized final PNG assets remain.
+
+---
+
+## Session Update: Talks Zoom Distortion (2026-07-14)
+
+### Objective
+Fix the production-only distortion that appears when a Talks image is opened in the zoom overlay.
+
+### Actions Started
+- Created a live-vs-local diagnosis plan.
+- Identified the likely interaction between fixed gallery crops and medium-zoom's opened-image state.
+- Audited the Talks image and medium-zoom CSS cascade; found an equal-specificity gallery rule imported after the global opened-image reset.
+- Reproduced the live defect and measured the opened image: fixed thumbnail height survives, `object-fit` falls to `fill`, and the intrinsic/rendered aspect ratios differ.
+- Inspected the deployed cascade: medium-zoom calculates a correct scale, but production applies a conflicting opened-image positioning rule and the overlay open selector is not matching.
+- Confirmed the settled overlay state is healthy; the distortion is isolated to the opened image retaining thumbnail dimensions with `object-fit: fill` after it is reparented to `<body>`.
+- Confirmed local `main` matches `origin/main` and the live page is already using a timestamped main stylesheet, so the fix must make the deployed cascade robust rather than relying on another cache refresh.
+- Captured the exact deployed `main.css` for selector-level comparison with the local Sass source.
+- Verified the deployed stylesheet omits the opened-image safeguard entirely; selected a final-layer `data-zoomable` overlay-state rule that preserves intrinsic proportions without interfering with medium-zoom's inline geometry.
+- Implemented the final-layer opening/opened/closing safeguard in `_editorial.scss`; `git diff --check` passes and unrelated thumbnail dimensions remain unchanged.
+- Reused the repository's established Docker/Jekyll production-build command for verification.
+- Docker/Jekyll build completed successfully; output contains only the repository's existing Sass and notebook deprecation warnings.
+- Confirmed the final compiled CSS order and opened the rebuilt Talks page at the local Docker preview for interaction QA.
+- Passed desktop open-state geometry and cascade checks: the new rule removes pixel stretching without changing card cropping or medium-zoom positioning.
+- Began real mobile interaction QA at 390×844; page containment and the crop-to-contain state switch both pass.
+- Identified and isolated a lazy-load race in the automated gallery click; switching the final mobile check to the loaded featured image avoids conflating image availability with the CSS fix.
+- The first featured-image locator click hit a browser-transport timeout even though the image is fully loaded and visibly within the 390×844 viewport; the target geometry was confirmed and a settled retry will use the same real control.
+- A second semantic-locator click hit the same transport timeout; mobile verification will switch to the browser's coordinate interaction against the already-measured visible image.
+- The alternative CSS-locator interaction also stalled and reset the browser QA kernel. Stopped repeating the unstable interaction path; mobile containment and the corrected computed style were already captured, and remaining regression checks will use the successful build plus generated assets.
+- Confirmed in the generated CSS that the new zoom safeguard occurs exactly once and after the fixed-height gallery rule.
+- Generated Talks/Publications asset checks pass, `git diff --check` remains clean, and the final worktree review shows only the user's existing publication/CV-site updates plus this scoped Sass change and planning notes.
+
+---
+
 ## Session Update: Homepage Layout Audit 2026-05-25
 
 ### Objective

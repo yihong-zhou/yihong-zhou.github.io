@@ -154,6 +154,97 @@ Audit focused on homepage and adjacent conversion pages:
 
 ---
 
+# Findings: Publication Preview Images (2026-07-14)
+
+## Initial Audit
+- The three newest entries without `preview` fields are `deng2026supervised`, `zhou2026decisionfocused`, and `paredes2027optimal`.
+- The first two provide arXiv identifiers (`2606.24947` and `2607.05830`).
+- The third is listed as Electric Power Systems Research, volume 262, article 113693 (2027), but the bibliography does not yet contain a DOI or paper URL.
+- Existing previews are PNG files under `assets/img/publication_preview/` and are referenced directly through the BibTeX `preview` field.
+
+## Source Selection Criteria
+- Prefer the arXiv author manuscript or publisher manuscript.
+- Select a figure that communicates the paper's central method or result at card size.
+- Avoid title pages, dense tables, and illegible multi-panel plots when a clearer overview figure exists.
+
+## Authoritative Sources Located
+- `deng2026supervised`: arXiv abstract and manuscript at `https://arxiv.org/abs/2606.24947` / `https://arxiv.org/pdf/2606.24947`.
+- `zhou2026decisionfocused`: arXiv abstract and manuscript at `https://arxiv.org/abs/2607.05830` / `https://arxiv.org/pdf/2607.05830`.
+- `paredes2027optimal`: open-access Elsevier article, DOI `10.1016/j.epsr.2026.113693`, with an institutional repository copy at the University of Seville (`idus.us.es`).
+- The EPSR article's Figure 1 is a bilevel TSO-aggregator structure diagram; later figures are denser multi-panel sensitivity/result plots. Figure 1 is the strongest card-size explanatory candidate unless rendering shows poor legibility.
+
+## Downloaded Manuscripts
+- `deng2026supervised.pdf`: 9 pages, US Letter.
+- `zhou2026decisionfocused.pdf`: 10 pages, US Letter.
+- `paredes2027optimal.pdf`: 8 pages, A4-like Elsevier layout.
+- All three downloads are valid PDF 1.7 files. Host `pdftotext` is unavailable, so caption discovery will use the bundled PDF libraries while visual rendering continues with Poppler.
+
+## Candidate Figures
+- `deng2026supervised`, PDF page 4: Figure 1 (schematic of the SRL framework) and Figure 2 (two-step fine-tuning). Figure 1 is the leading candidate because it communicates the complete method.
+- `zhou2026decisionfocused`, PDF page 4: Figure 1 (overall decision-focused scenario generation and downstream dispatch) and Figure 2 (simplified training illustration). Figure 1 is the leading candidate.
+- `paredes2027optimal`, PDF page 3: Figure 1 (bilevel TSO-aggregator interaction in reserve markets). This remains the leading candidate.
+
+## Visual Review Decision
+- SRL: crop Figure 1 only. It remains readable at card scale and clearly shows supervised pre-training followed by RL fine-tuning; Figure 2 is a more detailed extension and would make a combined crop too dense.
+- Decision-focused scenarios: crop the full Figure 1 overview. Its horizontal pipeline, colour, and downstream feedback loop make it the strongest visual of the three.
+- Reliability thresholds: crop Figure 1 including its caption. The compact green/orange bilevel diagram is clearer than the paper's multi-panel numerical results at preview size.
+- Each crop should preserve a small white margin and be exported on a white canvas rather than forcing an arbitrary aspect-ratio crop that cuts labels.
+
+## Crop QA
+- The first `sips` crops exposed ambiguous crop-offset semantics: the SRL deployment label and the EPSR diagram's orange reformulation node were clipped.
+- The decision-focused overview crop is compositionally strong but needs a few more bottom pixels so the caption is not tight against the edge.
+- Exact pixel-coordinate cropping is required; all final images must be re-opened at original resolution before integration.
+- The second exact-coordinate pass confirmed that captions themselves create fragile bottom edges at the wide card aspect ratio. Final previews will use the diagram artwork only, with captions supplied by the publication title already adjacent on the page.
+- The EPSR figure extends nearly to the PDF's right edge; its final crop must use the full remaining page width rather than a symmetric margin.
+
+## Rendered Publications QA
+- All three generated `<img>` elements load successfully at full natural resolution and the desktop page has no horizontal overflow.
+- Browser-computed `object-fit` is unexpectedly `cover` rather than the intended `contain`, rendering the 2.55:1 and 2.88:1 diagrams inside a 1.6:1 thumbnail box and risking clipped labels.
+- The selector mismatch/specificity must be corrected before acceptance so research diagrams remain fully visible.
+- The inherited `_base.scss` publication-thumbnail rule enforces a fixed 16:10 box with `object-fit: cover`. The editorial layer now explicitly wins the crop mode with `object-fit: contain !important`, preserving complete diagram labels inside that fixed box.
+- Final desktop QA: all three images load, render at 136×85 CSS pixels, use `object-fit: contain`, and the page width remains exactly 1280px.
+- Final mobile QA at 390×844: all three images load, render at 192×120 CSS pixels, stay within the viewport, use `contain`, and document `scrollWidth` remains exactly 390px.
+- Final mobile screenshot confirms the EPSR preview reads cleanly inside the 2027 entry with a restrained white image surface and no clipped content.
+
+---
+
+# Findings: Talks Zoom Distortion (2026-07-14)
+
+## Initial Hypothesis
+- Talks gallery thumbnails intentionally use fixed aspect ratios and `object-fit: cover`.
+- When medium-zoom moves a clicked image into its overlay, a sufficiently specific thumbnail rule may continue forcing the fixed aspect ratio/height or `object-fit: cover`, distorting the enlarged image.
+- The production page must be inspected after the zoom transition to determine which computed styles survive on `.medium-zoom-image--opened`.
+
+## Source Audit
+- Featured/standard Talk thumbnails use fixed heights (`205px`/`250px`) and `object-fit: cover`; gallery images use a fixed `220px` height and `object-fit: cover`.
+- `_base.scss` tries to switch opened images to `object-fit: contain`, but `_editorial.scss` is imported later.
+- For gallery images, `.talk-gallery img` has equal specificity to the global `img.medium-zoom-image--opened` rule, so the later editorial `cover` declaration can win in production. This is the strongest source-level explanation for zoomed gallery distortion.
+- Even where `contain` wins, opened images retain thumbnail height constraints unless those dimensions are explicitly reset in the zoom state.
+
+## Live Reproduction
+- Reproduced on the deployed page using the “PSCC 2026 conference dinner” gallery image.
+- Before opening: intrinsic ratio ≈1.501, rendered ratio ≈1.449, fixed `height: 220px`, `object-fit: cover`.
+- After the overlay class is applied: the image still has `height: 220px`, its computed `object-fit` becomes `fill`, and the rendered ratio remains ≈1.449 despite the intrinsic ratio ≈1.501. This proves the production distortion is a real CSS geometry mismatch, not an image-file problem.
+- The opened image also reported an identity transform in this browser run, so inline medium-zoom state and the overlay screenshot need one more inspection before selecting the exact reset properties.
+
+## Live Cascade Inspection
+- Medium-zoom writes a valid inline scale transform (`scale(3.58182)`) and absolute geometry to the opened image, so the zoom calculation itself is healthy.
+- The deployed CSS matching the opened image includes `.medium-zoom-image--opened { position: relative; }`, which conflicts with medium-zoom's inline absolute positioning model and is not present in the inspected local `_base.scss` zoom block.
+- The overlay remains at computed opacity 0 because the library's `.medium-zoom--opened .medium-zoom-overlay` selector is not matching in the captured state; the actual ancestor/class placement needs to be read once before patching.
+- Rechecking after the transition settled showed the zoom state is actually valid: `<body>` has `medium-zoom--opened`, the overlay selector matches, and the opened image is moved directly under `<body>` with a valid absolute transform. The remaining defect is the image box retaining the 318.695×220 thumbnail geometry while `object-fit` falls back to `fill`.
+- Production stylesheet rules differ from the current local source, supporting the user's observation that local behaviour is normal while the deployed website is not.
+- The deployed page is loading a timestamp-versioned `main.css` (`v=1783802968`), and the local `main` HEAD exactly matches `origin/main` at `657b615`; this is not explained by an unpushed commit or a constant cache key.
+- Downloaded the exact deployed stylesheet and confirmed the production Talks rules still impose 205/250/220px thumbnail heights; the next patch must explicitly override the opened state in the final editorial layer.
+- The exact deployed `main.css` contains no `medium-zoom-image--opened` selector at all, which explains the live `object-fit: fill`. The local source already has a generic safeguard in `_base.scss`; duplicating a stronger overlay-state safeguard in the final imported editorial layer will make the next deployment deterministic.
+- The rebuilt minified stylesheet contains the new opening/opened/closing selector after the fixed-height Talks rules, with `object-fit: contain !important` exactly as intended.
+- Desktop interaction QA at 1280px confirms the thumbnail remains `object-fit: cover`, while the settled opened image switches to `object-fit: contain`; medium-zoom still applies its scale transform and the overlay reaches opacity 1.
+- The real 390×844 viewport is horizontally contained (`scrollWidth: 390`). Its thumbnail keeps the intended 366×230 crop, and the opening overlay image already computes to `object-fit: contain`; one settled-state read remains because the first mobile sample landed before the transform/overlay transition completed.
+- The first mobile gallery target was still lazy-unloaded (`naturalWidth/Height: 0`) when automation clicked it, so medium-zoom later abandoned that transient open. This is a test-fixture timing issue; final mobile QA will use the already-loaded featured Talk image.
+- Mobile page containment and the `cover` → `contain` cascade switch were directly observed. A later locator call stalled the browser transport and reset that QA kernel before a second settled screenshot could be captured; desktop settled-state verification remains complete.
+- Generated Talks and Publications HTML pass the local asset/link existence check. Because the new rule only changes `object-fit` during medium-zoom's three transient states, publication thumbnails and normal Talk crops remain untouched.
+
+---
+
 # Findings: CV Submodule and PDF Automation
 
 ## Implementation Findings
