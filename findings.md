@@ -242,6 +242,18 @@ Audit focused on homepage and adjacent conversion pages:
 - The first mobile gallery target was still lazy-unloaded (`naturalWidth/Height: 0`) when automation clicked it, so medium-zoom later abandoned that transient open. This is a test-fixture timing issue; final mobile QA will use the already-loaded featured Talk image.
 - Mobile page containment and the `cover` → `contain` cascade switch were directly observed. A later locator call stalled the browser transport and reset that QA kernel before a second settled screenshot could be captured; desktop settled-state verification remains complete.
 - Generated Talks and Publications HTML pass the local asset/link existence check. Because the new rule only changes `object-fit` during medium-zoom's three transient states, publication thumbnails and normal Talk crops remain untouched.
+- After the user confirmed they had pushed, a fresh live fetch still returned the older Talks content (it does not include the newly added London Climate Action Week / PSCC 2026 entries). The production site is therefore not serving the just-pushed revision; deployment status must be checked before revisiting the CSS fix.
+- Local `main` and `origin/main` now both point to the user's new commit `de9ca3b`; all website changes are committed, with only local planning notes remaining modified. The GitHub CLI is not installed in this environment, so Actions status must be read from GitHub's public API.
+- GitHub reports `Deploy site` completed successfully for `de9ca3b` at 16:27:33Z, followed by a successful `pages build and deployment` for generated commit `4cabf273` at 16:28:18Z. This is not a build failure; the remaining suspect is edge/browser cache propagation.
+- A no-cache request to the London CDN edge is now serving the new build (`Last-Modified: 16:28:13Z`, `x-cache: MISS`, stylesheet version `1784046402`) and includes the London Climate Action Week and PSCC 2026 content. The deployment has reached production; a normal browser may still hold the previous response for up to the advertised 600-second cache lifetime.
+- The newly deployed `main.css` still contains zero `medium-zoom-image--opening` selectors even though the local production build contains the rule. Because the fresh HTML is current but the dynamic zoom selector alone is absent, the production CSS-cleaning/PurgeCSS stage is almost certainly stripping medium-zoom's runtime-only classes.
+- Confirmed the deployment workflow runs `purgecss -c purgecss.config.js` after Jekyll, and commit `de9ca3b` does contain the Sass safeguard. PurgeCSS removal—not a missing commit—is the root cause.
+- Added a narrow greedy safelist for selectors containing `medium-zoom`, covering the runtime opening/opened/closing classes and the overlay state without retaining unrelated unused CSS.
+- PurgeCSS's current official configuration documentation confirms `safelist.greedy` preserves an entire selector when any part matches the supplied regular expression, exactly matching this combined `img[data-zoomable].medium-zoom-*` use case.
+- GitHub `main` still points to `de9ca3b`, matching the local parent commit; no newer remote change will be overwritten by the follow-up fix.
+- The follow-up Pages build is live at the London edge (`Last-Modified: 16:42:51Z`, `x-cache: MISS`) with new stylesheet version `1784047266` and the current Talks content.
+- The post-PurgeCSS production stylesheet now contains exactly one opening/opened/closing selector and preserves `object-fit: contain!important`; the safelist fix worked in the real GitHub Pages pipeline.
+- A normal non-cache-busted request now serves the new HTML and stylesheet version, and the user independently confirmed that image enlargement works correctly on the public website.
 
 ---
 
@@ -426,3 +438,51 @@ Audit focused on homepage and adjacent conversion pages:
 - Final footer review passes in dark mode: the normal-flow footer has clear identity, contact links, location, and copyright, with no overlap against the last Talk entry.
 - The browser was returned to System theme (currently light), the viewport override was reset, and the main preview was returned to the homepage.
 - The generated main stylesheet URL still used the constant `d41d8cd…` empty-file hash, which could leave returning visitors on stale CSS after deployment. The main stylesheet now uses the Jekyll build timestamp as its version query so every deployment invalidates the browser cache.
+# Findings: Homepage Content Simplification (2026-07-23)
+
+## User Direction
+- Retain only the supplied “Building the control layer…” heading and research-foundation paragraph in the opening content area.
+- Move the current position to the left, directly beneath the portrait.
+- Move speedup metrics beneath “Representative works I want to build on.”
+
+## Source Audit
+- Homepage content is authored bilingually in `_pages/about.md`; the same structural changes must be mirrored in English and Chinese panels.
+- The current position is inside the right-side `.star-hero-proof` rail, while the portrait itself is rendered by the About layout from front matter.
+- The metric strip currently sits immediately after the manifesto and before the representative-work section.
+- Existing responsive styles already collapse the portrait/sidebar and evidence cards cleanly; the new position block should attach to the sidebar rather than remain in `.star-hero-proof`.
+- The About layout can render a reusable `page.profile.position` block immediately after the portrait. At tablet/mobile widths, the existing two-column sidebar grid naturally places this block beside the compact portrait and above the social links.
+- The cleanest interpretation of “only retain” is a single opening panel containing the supplied heading and thesis paragraph: remove the kicker, CTA row, right proof rail, and separate manifesto block.
+- The current four-item metric strip can be moved intact beneath the representative-work cards, avoiding accidental loss of citation/scale evidence while reducing first-screen density.
+
+## Implementation
+- Opening content is now a single full-width editorial card containing only the requested heading and research-foundation paragraph in each language.
+- Current position is supplied through `profile.position` front matter and rendered immediately after the portrait by the About layout.
+- The existing four metrics now follow the three representative-work cards, with a small spacing modifier for their new context.
+- Responsive sidebar overrides keep the position legible beside the compact portrait and hide only the lowest-priority lab line on the narrowest phones.
+
+## Static Verification
+- `git diff --check` passes.
+- Homepage markup now has exactly one English and one Chinese metric strip, both after their representative-work grids.
+- No `.star-hero-proof` or `.star-manifesto` markup remains; their legacy styles are harmless and can stay for backwards compatibility.
+- “Postdoctoral Research Associate” now appears only in profile front matter, eliminating the duplicate right-side position block.
+
+## Visual Verification
+- Desktop first viewport is materially calmer: portrait and position anchor the left rail, while the main column contains one strong headline and one supporting paragraph.
+- The hero card now uses the full main-column width and no longer competes with a narrow proof rail.
+- Desktop geometry confirms the representative-work grid ends before the relocated metric strip begins, and the 1280px document has no horizontal overflow.
+- The scrolled desktop review shows the position card directly beneath the portrait and preserves a clear three-column hierarchy for representative works.
+- At 390×844, the position stays attached to the portrait block, the opening contains exactly the requested heading and paragraph, and the document width remains 390px with no horizontal overflow.
+- Mobile geometry also confirms the metric strip begins after the stacked representative-work cards.
+- Scrolled mobile review confirms the representative works remain readable as single-column cards and the metrics render as a compact two-column strip beneath them.
+- The mobile accessibility snapshot exposes one current-position block, the exact requested English opening copy, representative works, and the relocated research-signal region in the intended reading order.
+- The visible Chinese language control switches successfully, and the Chinese opening mirrors the same simplified one-heading/one-paragraph composition without layout overflow.
+
+## Follow-up: Metric Consolidation
+- The user removed the standalone metric-strip requirement after reviewing the result.
+- The final homepage instead places “100x+ speedups” in the chance-constraint card and “trained within 15 min on a single non-data-centre GPU” in the GradMAP card, mirrored in Chinese.
+- No research-signal strip remains in the homepage source or generated HTML.
+- The user then chose to remove the Leadership & Service panel entirely; neither language version remains on the homepage.
+- The CV panel was further simplified: the background paragraph is removed, the headline receives a full-width single-line desktop treatment, and the CV buttons form a second row; smaller viewports may wrap the headline normally.
+- The representative-work heading now opts out of the generic 43rem heading cap and stays on one line at desktop widths; responsive wrapping remains enabled below 992px.
+
+---
