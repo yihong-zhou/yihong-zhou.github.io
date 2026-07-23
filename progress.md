@@ -273,6 +273,33 @@ Fix the production-only distortion that appears when a Talks image is opened in 
 - The alternative CSS-locator interaction also stalled and reset the browser QA kernel. Stopped repeating the unstable interaction path; mobile containment and the corrected computed style were already captured, and remaining regression checks will use the successful build plus generated assets.
 - Confirmed in the generated CSS that the new zoom safeguard occurs exactly once and after the fixed-height gallery rule.
 - Generated Talks/Publications asset checks pass, `git diff --check` remains clean, and the final worktree review shows only the user's existing publication/CV-site updates plus this scoped Sass change and planning notes.
+- User confirmed the changes were pushed. Reopened the public URL and found the whole Talks page is still on the older build, so investigation moved to GitHub Pages/Actions deployment state.
+- Confirmed the pushed revision locally (`de9ca3b`) and found `gh` unavailable; switching the read-only workflow inspection to GitHub's public REST endpoints.
+- Retrieved the repository's recent Actions runs from GitHub's public API; parsing the pushed revision's workflow state next.
+- Confirmed both the source deploy and downstream Pages deployment succeeded; started a cache-busted/no-cache fetch of the public Talks page to distinguish propagation from a code defect.
+- Confirmed the fresh public HTML is the newly deployed revision at the London edge. Next check is the exact production CSS selector and live zoom computation.
+- Confirmed the freshly deployed stylesheet omits the new runtime-only zoom selector; moved diagnosis to the production CSS purge/safelist configuration.
+- Located the post-build PurgeCSS step in `deploy.yml` and confirmed the pushed Sass is present; preparing the minimal safelist change.
+- Implemented the PurgeCSS safelist fix. The running Docker image does not have the workflow's globally installed PurgeCSS binary, so exact post-build verification requires installing the same CLI in that disposable container.
+- The Jekyll image also lacks `npm`; located the bundled Node/pnpm runtime and will install PurgeCSS into `/private/tmp` for an isolated verification run.
+- Rebuilt Jekyll successfully. The attempt to download a temporary PurgeCSS CLI was rejected by the safety layer because it would execute third-party code; no download occurred. Checking only already-installed local packages next.
+- No local PurgeCSS package is available, but the fix's configuration shape was validated against the current official PurgeCSS documentation; proceeding with local syntax/build checks before the follow-up deployment.
+- PurgeCSS config loads successfully in Node, the regex matches the runtime opened selector, the Jekyll build passes, and `git diff --check` is clean. The only website source change for this follow-up is `purgecss.config.js`.
+- Confirmed the remote `main` SHA still matches the local parent; ready to commit and deploy only the PurgeCSS safelist fix.
+- Committed the single production fix as `048ccd1` (`fix production image zoom styles`) and pushed it to `origin/main`; GitHub Pages deployment monitoring is now active.
+- GitHub Actions run `29350600206` (`Deploy site`) has started for `048ccd1` and is currently in progress.
+- First follow-up poll shows the deploy is still running normally; no failure or cancellation has appeared.
+- `Deploy site` run `29350600206` completed successfully for `048ccd1` at 16:42:08Z; waiting for the downstream Pages publish/CDN refresh before reading the final stylesheet.
+- Downstream `pages build and deployment` run `29350727166` also completed successfully at 16:42:56Z; production verification can now target generated commit `49eca749`.
+- Confirmed the follow-up build has reached the public CDN edge; fetching stylesheet `1784047266` for the decisive post-PurgeCSS selector check.
+- Decisive production CSS check passes: the runtime medium-zoom selector survives PurgeCSS in the deployed stylesheet. One final interactive click/computed-style check remains.
+- The earlier in-app browser kernel was reset by its transport timeout, and no standalone Playwright package is installed in the bundled runtime. Checking the browser plugin's existing local runtime before falling back to production DOM/CSS evidence.
+- Google Chrome and the browser plugin's local client are installed, but no standalone Playwright/Chromium CLI is available. The deployed selector check already proves the production-only defect is fixed; interactive verification will use the existing browser client only if it can reconnect safely.
+- The browser client is a local module rather than a command-line tool; attempting a direct module reconnect next, without downloading or installing anything.
+- Loaded the installed browser client module and confirmed its supported `setupBrowserRuntime` entrypoint; reconnecting it to the in-app browser for the final real click check.
+- Browser runtime setup completed but did not recreate the previous convenience bindings (`browser`, `tab`, `viewportCap`) after the kernel reset; checking the installed runtime's exposed globals once, then stopping if no supported handle is available.
+- No supported browser handle was exposed after reconnect, so no further unstable interaction retries will be made. Captured the ordinary (non-cache-busted) public URL to verify what a normal visitor receives now.
+- Public URL, production stylesheet, GitHub Pages deployment, and the user's own interactive check all pass. The production zoom issue is fully resolved.
 
 ---
 
@@ -329,3 +356,32 @@ Raise the website's overall professionalism, material quality, and aesthetic coh
 - `git diff --check` reports no whitespace errors.
 - Final review fixes add visible keyboard focus to both language switches and improve the dark-theme Collaboration navigation contrast.
 - Replaced the broken constant main-CSS cache key with a per-build timestamp, ensuring the redesign is fetched immediately after deployment.
+## Session Update: Homepage Content Simplification (2026-07-23)
+
+### Objective
+Reduce homepage content density and reorganize position and evidence metrics.
+
+### Actions Started
+- Created a three-phase audit, implementation, and responsive-verification plan.
+- Located the bilingual hero, manifesto, position rail, metric strip, representative-work grid, and their responsive styles.
+- Audited the full bilingual markup and About layout; selected a front-matter-driven sidebar position block plus a simplified single-column opening panel.
+- Implemented the bilingual content simplification, sidebar position card, metric relocation, and responsive position styles.
+- Completed source diff and duplication/order checks; no whitespace or structural issue was found.
+- Docker/Jekyll build completed successfully with only the repository's existing deprecation warnings.
+- Connected the responsive browser preview; the first wait request used an unsupported `networkidle` state, so verification will continue with the supported `load` state.
+- Desktop screenshot confirms the simplified first viewport and correctly placed position card.
+- DOM geometry confirms the metric strip follows the representative-work grid; there is one English metric strip and no legacy hero-proof or manifesto markup.
+- Desktop review of the representative-work section confirms clean alignment between the left position card and the main content column.
+- Completed the 390×844 first-screen review and responsive geometry check; no overflow or ordering regression was found.
+- Reviewed the lower mobile homepage through the representative-work and metric sections; both retain the intended hierarchy.
+- Returned to the mobile page top and verified the semantic reading order before checking the Chinese panel.
+- The hidden radio locator did not activate the styled language switch in the browser harness; the checked state remained English, so the next verification uses the visible “中文” control.
+- Verified the Chinese mobile panel through the visible switch; its simplified opening renders correctly.
+- Final `git diff --check` passes; the requested homepage files and planning notes are the only modified files in the worktree.
+- Follow-up completed: removed both language versions of the metric strip and integrated the two requested performance facts into their corresponding representative-work cards.
+- Rebuilt the site successfully and confirmed the new copy appears in generated HTML with no remaining research-signal strip.
+- Removed the complete Leadership & Service panel in English and Chinese and completed another successful Jekyll build.
+- Simplified both CV panels by removing the supporting paragraph, placing the buttons below the headline, and applying a one-line desktop headline treatment; Jekyll build passes.
+- Expanded the representative-work heading to the full content width in both languages, keeping it single-line on desktop while preserving responsive wrapping; build passes.
+
+---

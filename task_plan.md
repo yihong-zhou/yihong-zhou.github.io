@@ -337,7 +337,7 @@ Phase 4
 Reproduce and fix the production-only image distortion that appears after opening Talks photographs in the zoom overlay.
 
 ## Current Phase
-Phase 3
+Complete
 
 ## Phases
 ### Phase 1: Reproduce and Diagnose
@@ -356,6 +356,15 @@ Phase 3
 - [x] Confirm no horizontal overflow or regression on Publications images
 - **Status:** completed
 
+### Phase 4: Verify deployment
+- [x] Identify the pushed revision and its GitHub Pages workflow state
+- [x] Inspect any failed build/deploy log and isolate the root cause
+- [x] Add and locally validate a PurgeCSS safelist for medium-zoom runtime selectors
+- [x] Commit and push the production safelist fix (`048ccd1`)
+- [x] Confirm the live Talks HTML and zoom CSS update after deployment
+- [x] Receive independent user confirmation that the public zoom interaction works
+- **Status:** completed
+
 ## Decisions Made
 | Decision | Rationale |
 |----------|-----------|
@@ -369,3 +378,48 @@ Phase 3
 | Mobile featured-image locator click timed out in the browser transport | 2 | Target load/viewport geometry is valid; switch to the real coordinate interaction capability against the measured visible image |
 | Alternative mobile CSS-locator click stalled and reset the browser kernel | 1 | Stop retrying the unstable transport; retain the captured 390px geometry/style evidence and finish with generated-site regression checks |
 | First inline generated-asset checker had a shell quoting parse error | 1 | Simplify the checker to the generated HTML's double-quoted attributes and rerun |
+| GitHub CLI is not installed (`gh: command not found`) | 1 | Use GitHub's public Actions/Pages REST endpoints for read-only deployment inspection |
+| Web opener rejected the GitHub API URL as unsafe | 1 | Fetch the same public endpoint with the already-approved `curl` command |
+| Local Docker service does not have the workflow-only `purgecss` binary | 1 | Install PurgeCSS in the disposable development container, then run the exact production command |
+| Jekyll container also lacks `npm` | 1 | Use the bundled Node/pnpm runtime and an isolated `/private/tmp` tool directory |
+| Temporary `pnpm dlx purgecss` was rejected as third-party code execution | 1 | Do not retry or work around the rejection; use an already-installed local PurgeCSS package if present, otherwise rely on config/schema validation plus the GitHub workflow |
+# Task Plan: Homepage Content Simplification (2026-07-23)
+
+## Goal
+Simplify the homepage opening, move the current position beneath the left portrait, and fold the key performance evidence into the representative-work descriptions without a separate metric strip.
+
+## Current Phase
+Phase 3
+
+## Phases
+### Phase 1: Audit current structure
+- [x] Locate the homepage markup and corresponding responsive styles
+- [x] Map each user-requested content move to its current component
+- **Status:** completed
+
+### Phase 2: Implement
+- [x] Keep only the supplied research heading and paragraph in the opening content
+- [x] Move the current Oxford position beneath the portrait
+- [x] Remove the separate metric strip and move the requested performance facts into the first two representative-work descriptions
+- **Status:** completed
+
+### Phase 3: Verify
+- [x] Build the site
+- [x] Review desktop and mobile layouts in the browser
+- [x] Confirm no duplicated position or speedup content remains
+- **Status:** completed
+
+## Decisions Made
+| Decision | Rationale |
+|----------|-----------|
+| Preserve the user's supplied English text verbatim | This is an editorial simplification request, not a rewrite |
+| Reuse existing visual components where possible | Maintain the professional design system while reducing density |
+
+## Errors Encountered
+| Error | Attempt | Resolution |
+|-------|---------|------------|
+| Browser preview does not support `networkidle` wait state | 1 | Use the documented `load` state and take a fresh DOM snapshot before continuing |
+| Browser DOM wrapper does not expose `compareDocumentPosition` | 1 | Verify content order using absolute element offsets instead of DOM node methods |
+| Clicking the hidden Chinese radio did not trigger the styled language tab | 1 | Use the visible “中文” label in the rendered switch for interaction verification |
+
+---

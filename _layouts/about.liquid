@@ -26,6 +26,15 @@ layout: default
             cache_bust=true
           %}
         {% endif %}
+
+        {% if page.profile.position %}
+          <div class="profile-position">
+            <span>{{ page.profile.position.eyebrow }}</span>
+            <strong>{{ page.profile.position.title }}</strong>
+            <a href="{{ page.profile.position.url }}" target="_blank" rel="noopener noreferrer">{{ page.profile.position.institution }}</a>
+            <small>{{ page.profile.position.unit }}</small>
+          </div>
+        {% endif %}
         
         {% if page.profile.address %}
         <div class="address">

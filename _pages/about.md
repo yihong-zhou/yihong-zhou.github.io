@@ -8,6 +8,12 @@ profile:
   align: left
   image: portrait2026.jpg
   image_circular: false # crops the image to make it circular
+  position:
+    eyebrow: Current position
+    title: Postdoctoral Research Associate
+    institution: University of Oxford
+    url: https://www.ox.ac.uk/
+    unit: Power Systems Architecture Lab
   # more_info: >
   #   <p>555 your office number</p>
   #   <p>123 your address street</p>
@@ -39,67 +45,17 @@ latest_posts:
     <section class="lang-panel lang-panel-en" lang="en">
       <section class="star-hero">
         <div class="star-hero-copy">
-          <div class="star-kicker">Grid intelligence for the AI era</div>
           <h2>Building the control layer for flexible, AI-native power systems.</h2>
           <p>
-            I design optimization and AI methods that make flexible loads dependable enough for real grid operation, with safety guarantees and accelerator-native computation.
+            Future power systems will not be operated simply by adding more forecasting tools and control dashboards. They will need a new algorithmic layer that turns millions of grid-edge devices and AI-supporting data centres into "grid-intelligent" assets that operators can trust. This ambition forms the foundation of my research.
           </p>
-          <div class="star-actions">
-            <a href="/publications/" class="btn btn-sm z-depth-0 star-primary-action" role="button"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Publications</a>
-            <a href="/cv/" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> CV</a>
-            <a href="/collaboration/" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-handshake" aria-hidden="true"></i> Collaborate</a>
-          </div>
-        </div>
-        <aside class="star-hero-proof" aria-label="Profile highlights">
-          <div class="star-affiliation-card">
-            <img src="/assets/img/oxford-crest.png" alt="University of Oxford crest">
-            <span>Oxford</span>
-            <strong>Postdoctoral Research Associate</strong>
-            <p>Power Systems Architecture Lab</p>
-          </div>
-          <div>
-            <span>2026</span>
-            <strong>IEEE TIA + INFORMS JOC</strong>
-            <p>Recent work spans AI data centres, chance constraints, and GPU-native grid computation.</p>
-          </div>
-          <div>
-            <span>Verified</span>
-            <strong>Real GPU experiments</strong>
-            <p>Primary response from AI data centres tested on physical GPU hardware.</p>
-          </div>
-        </aside>
-      </section>
-
-      <section class="star-manifesto" aria-label="Research thesis">
-        <div class="star-section-label">Research Thesis</div>
-        <p>
-          Future power systems will not be operated simply by adding more forecasting tools and control dashboards. They will need a new algorithmic layer that turns millions of grid-edge devices and AI-supporting data centres into "grid-intelligent" assets that operators can trust. This ambition forms the foundation of my research.
-        </p>
-      </section>
-
-      <section class="star-proof-strip" aria-label="Research signals">
-        <div>
-          <span>100x+</span>
-          <p>faster chance-constrained approximations</p>
-        </div>
-        <div>
-          <span>1,000</span>
-          <p>agents trained in GradMAP without parameter sharing</p>
-        </div>
-        <div>
-          <span>10x+</span>
-          <p>GPU-accelerated batched power-flow speedups</p>
-        </div>
-        <div>
-          <span>343</span>
-          <p>Google Scholar citations</p>
         </div>
       </section>
 
       <section class="star-section">
-        <div class="star-section-heading">
+        <div class="star-section-heading star-section-heading-wide">
           <span>Flagship Work</span>
-          <h2>Representative work I am proud to be building on.</h2>
+          <h2>Representative works I want to build on.</h2>
         </div>
         <div class="star-evidence-grid">
           <a class="star-evidence-card star-evidence-card-large" href="/publications/#zhou2024strengthened">
@@ -107,7 +63,7 @@ latest_posts:
             <div>
               <span>INFORMS Journal on Computing · 2026</span>
               <strong>Faster joint chance constraints</strong>
-              <p>Strengthened Wasserstein-robust approximation for large-scale decisions under uncertainty, with major speedups.</p>
+              <p>Strengthened Wasserstein-robust approximation for large-scale decisions under uncertainty, with 100x+ speedups.</p>
             </div>
           </a>
           <a class="star-evidence-card star-evidence-card-large" href="/publications/#zhou2026gradmap">
@@ -115,7 +71,7 @@ latest_posts:
             <div>
               <span>arXiv · 2026</span>
               <strong>GradMAP for grid-edge flexibility</strong>
-              <p>Multi-agent proximal learning for 1,000 agents without parameter sharing, embedding three-phase AC load flow.</p>
+              <p>Multi-agent proximal learning for 1,000 agents without parameter sharing, embedding three-phase AC load flow; trained within 15 min on a single non-data-centre GPU.</p>
             </div>
           </a>
           <a class="star-evidence-card star-evidence-card-large" href="/publications/#zhou2026gridintelligent">
@@ -153,28 +109,10 @@ latest_posts:
         </div>
       </section>
 
-      <section class="star-section star-leadership">
-        <div>
-          <span>Leadership & Service</span>
-          <h2>Active in the emerging AI-for-energy community.</h2>
-        </div>
-        <ul>
-          <li>Speaker and panelist, London Climate Action Week 2026, Oxford.</li>
-          <li>Presenter, Power Systems Computation Conference 2026, Limassol.</li>
-          <li>Panelist, IEEE PES International Meeting 2026, Hong Kong.</li>
-          <li>Special Session Chair, IEEE I&CPS Asia 2026, Kunming.</li>
-          <li>Special Session Chair, IEEE EI<sup>2</sup> 2026, Shanghai.</li>
-          <li>Organiser and chair, Oxford Workshop on Safeguarded AI Agents for Grid-Edge Flexibility.</li>
-        </ul>
-      </section>
-
       <section class="star-cv-band">
         <div>
           <span>CV & Background</span>
           <h2>PhD in grid flexibility, MSc in AI, now building at the interface of both.</h2>
-          <p>
-            PhD, University of Edinburgh, 2025. Visiting PhD Student at Oxford, 2024--2025. Current postdoctoral work is part of ARIA SAGEflex at the University of Oxford.
-          </p>
         </div>
         <div class="star-actions">
           <a href="/assets/pdf/Yihong_Zhou_CV_en.pdf" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> English CV</a>
@@ -186,65 +124,15 @@ latest_posts:
     <section class="lang-panel lang-panel-zh" lang="zh-Hans">
       <section class="star-hero">
         <div class="star-hero-copy">
-          <div class="star-kicker">面向 AI 时代的电网智能</div>
           <h2>构建面向灵活性资源与 AI 基础设施的电力系统控制层。</h2>
           <p>
-            我的研究目标是让灵活负载真正成为电网可以信任的资源：结合概率安全保证、GPU 原生计算和真实 AI 数据中心响应实验，推进可部署的电网智能。
+            未来电力系统不能只是简单叠加更多预测工具和控制面板。它需要一层新的算法基础设施，把数以百万计的电网边缘设备和支撑 AI 的数据中心，转化为运行者能够信任的“grid-intelligent”资产。这一目标构成了我研究工作的基础。
           </p>
-          <div class="star-actions">
-            <a href="/publications/" class="btn btn-sm z-depth-0 star-primary-action" role="button"><i class="fa-solid fa-book-open" aria-hidden="true"></i> 论文</a>
-            <a href="/cv/" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> 简历</a>
-            <a href="/collaboration/" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-handshake" aria-hidden="true"></i> 合作</a>
-          </div>
-        </div>
-        <aside class="star-hero-proof" aria-label="个人亮点">
-          <div class="star-affiliation-card">
-            <img src="/assets/img/oxford-crest.png" alt="University of Oxford crest">
-            <span>Oxford</span>
-            <strong>牛津大学博士后研究员</strong>
-            <p>Power Systems Architecture Lab</p>
-          </div>
-          <div>
-            <span>2026</span>
-            <strong>IEEE TIA + INFORMS JOC</strong>
-            <p>近期工作覆盖 AI 数据中心、机会约束优化和 GPU 原生电网计算。</p>
-          </div>
-          <div>
-            <span>验证</span>
-            <strong>真实 GPU 实验</strong>
-            <p>在物理 GPU 硬件上验证 AI 数据中心一次调频响应。</p>
-          </div>
-        </aside>
-      </section>
-
-      <section class="star-manifesto" aria-label="研究主线">
-        <div class="star-section-label">研究主线</div>
-        <p>
-          未来电力系统不能只是简单叠加更多预测工具和控制面板。它需要一层新的算法基础设施，把数以百万计的电网边缘设备和支撑 AI 的数据中心，转化为运行者能够信任的“grid-intelligent”资产。这一目标构成了我研究工作的基础。
-        </p>
-      </section>
-
-      <section class="star-proof-strip" aria-label="研究信号">
-        <div>
-          <span>100x+</span>
-          <p>机会约束近似加速</p>
-        </div>
-        <div>
-          <span>1,000</span>
-          <p>GradMAP 中无参数共享训练的智能体</p>
-        </div>
-        <div>
-          <span>10x+</span>
-          <p>GPU 批量潮流计算加速</p>
-        </div>
-        <div>
-          <span>343</span>
-          <p>Google Scholar 引用</p>
         </div>
       </section>
 
       <section class="star-section">
-        <div class="star-section-heading">
+        <div class="star-section-heading star-section-heading-wide">
           <span>代表性工作</span>
           <h2>我最想持续往下推进的几条研究线。</h2>
         </div>
@@ -254,7 +142,7 @@ latest_posts:
             <div>
               <span>INFORMS Journal on Computing · 2026</span>
               <strong>更快的联合机会约束近似</strong>
-              <p>面向大规模不确定性决策的 Wasserstein 鲁棒优化方法，显著降低计算难度。</p>
+              <p>面向大规模不确定性决策的 Wasserstein 鲁棒优化方法，实现 100 倍以上加速。</p>
             </div>
           </a>
           <a class="star-evidence-card star-evidence-card-large" href="/publications/#zhou2026gradmap">
@@ -262,7 +150,7 @@ latest_posts:
             <div>
               <span>arXiv · 2026</span>
               <strong>面向电网边缘灵活性的 GradMAP</strong>
-              <p>1000 个智能体、无参数共享训练，并嵌入三相交流潮流计算。</p>
+              <p>1000 个智能体、无参数共享训练，并嵌入三相交流潮流计算；仅用一张非数据中心级 GPU，15 分钟内完成训练。</p>
             </div>
           </a>
           <a class="star-evidence-card star-evidence-card-large" href="/publications/#zhou2026gridintelligent">
@@ -300,28 +188,10 @@ latest_posts:
         </div>
       </section>
 
-      <section class="star-section star-leadership">
-        <div>
-          <span>学术领导力与服务</span>
-          <h2>积极参与 AI for Energy 新兴学术社区。</h2>
-        </div>
-        <ul>
-          <li>London Climate Action Week 2026 演讲嘉宾与圆桌嘉宾，牛津。</li>
-          <li>Power Systems Computation Conference 2026 报告人，利马索尔。</li>
-          <li>IEEE PES International Meeting 2026 圆桌嘉宾，香港。</li>
-          <li>IEEE I&CPS Asia 2026 Special Session Chair，昆明。</li>
-          <li>IEEE EI<sup>2</sup> 2026 Special Session Chair，上海。</li>
-          <li>Oxford Workshop on Safeguarded AI Agents for Grid-Edge Flexibility 组织者与主席。</li>
-        </ul>
-      </section>
-
       <section class="star-cv-band">
         <div>
           <span>简历与背景</span>
           <h2>博士研究电网灵活性，硕士训练人工智能，现在连接二者。</h2>
-          <p>
-            2025 年获爱丁堡大学博士学位，2024--2025 年曾在牛津大学访问。目前在牛津大学 ARIA SAGEflex 项目中开展博士后研究。
-          </p>
         </div>
         <div class="star-actions">
           <a href="/assets/pdf/Yihong_Zhou_CV_en.pdf" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> English CV</a>
