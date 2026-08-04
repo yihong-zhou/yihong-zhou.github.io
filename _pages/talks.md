@@ -10,6 +10,20 @@ nav_order: 4
 
 <h3 class="year">2026</h3>
 
+<div class="row talk-entry">
+  <div class="col-12">
+    <h5>The Internet meets the Electricity Grid: Technical Standards and Societal Challenges</h5>
+    <p class="talk-meta"><strong>Role:</strong> Panelist | <strong>Session:</strong> Internetification of the Electric Grid | <strong>Date:</strong> 16 July 2026 | <strong>Location:</strong> University of Passau, Germany</p>
+    <p>
+      I joined experts from the electricity-grid and Internet-protocol communities to discuss how far the electric grid should be “Internetified”, the technical boundaries of this convergence, and the standards and coordination mechanisms needed for sustainable, trustworthy cross-infrastructure operation.
+    </p>
+    <div class="talk-links">
+      <a href="https://www.uni-passau.de/en/sustainability/news-and-successes/current-events/workshop-of-the-internet-research-task-force" class="btn btn-sm z-depth-0" role="button">Workshop</a>
+      <a href="https://www.uni-passau.de/en/sustainability/news-and-successes/current-events/workshop-of-the-internet-research-task-force/programme" class="btn btn-sm z-depth-0" role="button">Programme</a>
+    </div>
+  </div>
+</div>
+
 <div class="row talk-entry talk-entry-featured">
   <div class="col-sm-4">
     {% include figure.liquid loading="eager" path="assets/img/events/2026-lcaw-talk-1.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Yihong Zhou presenting research on grid-intelligent AI data centres at London Climate Action Week" %}

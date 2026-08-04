@@ -53,6 +53,8 @@ Complete
 ## Errors Encountered
 | Error | Attempt | Resolution |
 |-------|---------|------------|
+| Direct web extraction of the supplied Scholar profile returned an internal error | 1 | Inspect the exact profile through the in-app browser and cross-check against local bibliography |
+| Combined CV build-script search returned exit 2 after traversing the embedded CV repository metadata | 1 | Use explicit source paths and inspect the available TeX binaries directly instead of searching the nested `.git` directory |
 | `rg` not available in shell | 1 | Switched to `find` + `grep` + `sed` |
 | Parallel copy/check race when creating planning files | 1 | Re-ran copy and verification sequentially |
 | `bundle exec jekyll build` failed: missing `bundler` 4.0.4 | 1 | Logged environment constraint; provided verification caveat to user |
@@ -423,3 +425,44 @@ Phase 3
 | Clicking the hidden Chinese radio did not trigger the styled language tab | 1 | Use the visible “中文” label in the rendered switch for interaction verification |
 
 ---
+
+# Task Plan: Scholar, CV, Website, and Passau Panel Update (2026-08-04)
+
+## Goal
+Verify the latest Google Scholar record and the University of Passau panel event, then update the bilingual website and CV sources/PDFs consistently.
+
+## Current Phase
+Phase 3 complete
+
+## Phases
+### Phase 1: Audit and source verification
+- [x] Capture current Scholar publications/citations
+- [x] Verify Passau workshop title, date, venue, and role
+- [x] Compare Scholar with local bibliography/CV
+- [x] Map required website and bilingual CV edits
+- **Status:** completed
+
+### Phase 2: Implement website and CV updates
+- [x] Update bibliography/publications/news/talks/about as supported by verified sources
+- [x] Update English and Chinese CV source
+- [x] Rebuild final CV PDFs
+- **Status:** completed
+
+### Phase 3: Verify
+- [x] Build website and run source consistency checks
+- [x] Render and visually inspect every updated CV PDF page
+- [x] Confirm final PDFs and website assets are linked correctly
+- **Status:** completed
+
+## Decisions Made
+| Decision | Rationale |
+|----------|-----------|
+| Treat Google Scholar and the University of Passau page as verification sources | They are the user-specified current records |
+| Preserve bilingual parity | The site and CV are maintained in English and Chinese |
+
+## Errors Encountered
+| Error | Attempt | Resolution |
+|-------|---------|------------|
+| Planning update context matched an older task section instead of the current Scholar task | 1 | Re-read the plan tail and patch the current task block with exact context |
+| Combined CV build-script search traversed a nested Git directory and returned exit 2 | 1 | Scoped subsequent searches to the CV source files and used the installed TeX toolchain directly |
+| Final PDF text-extraction check called unavailable `pdftotext` | 1 | Rely on the completed six-page visual inspection plus source/generated-HTML checks; rerun remaining Git checks separately |

@@ -5,7 +5,7 @@ title: CV
 nav: true
 nav_order: 5
 eyebrow: Curriculum vitae
-description: Academic CV · Updated July 2026.
+description: Academic CV · Updated August 2026.
 ---
 
 <div class="cv-summary" aria-label="CV summary">

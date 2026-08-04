@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-07-11'
+  last_updated: '2026-08-04'
 papers:
   cY3c6eUAAAAJ:0EnyYjriUFMC:
     citations: 1
     title: Bilevel transmission expansion planning with joint chance-constrained dispatch
     year: '2025'
   cY3c6eUAAAAJ:2osOgNQ5qMEC:
-    citations: 86
+    citations: 89
     title: Robust load forecasting towards adversarial attacks via Bayesian learning
     year: '2022'
   cY3c6eUAAAAJ:3fE2CSJIrl8C:
@@ -26,7 +26,7 @@ papers:
     title: 'FICA: Faster Inner Convex Approximation of Chance Constrained Grid Dispatch with Decision-Coupled Uncertainty'
     year: '2025'
   cY3c6eUAAAAJ:9yKSN-GCB0IC:
-    citations: 37
+    citations: 38
     title: Flexibility prediction of aggregated electric vehicles and domestic hot water systems in smart grids
     year: '2021'
   cY3c6eUAAAAJ:IjCSPb-OGe4C:
@@ -38,7 +38,7 @@ papers:
     title: Independent aggregators securing end user Wasserstein distributionally robust flexibility through bilevel incentives
     year: '2026'
   cY3c6eUAAAAJ:LkGwnXOMwfcC:
-    citations: 13
+    citations: 15
     title: Ai-focused hpc data centers can provide more power grid flexibility and at lower cost
     year: '2024'
   cY3c6eUAAAAJ:M3ejUd6NZC8C:
@@ -58,7 +58,7 @@ papers:
     title: 'GradMAP: Gradient-Based Multi-Agent Proximal Learning for Grid-Edge Flexibility'
     year: '2026'
   cY3c6eUAAAAJ:UebtZRa9Y70C:
-    citations: 23
+    citations: 29
     title: Large language model interface for home energy management systems
     year: '2025'
   cY3c6eUAAAAJ:WF5omc3nYNoC:
@@ -84,7 +84,7 @@ papers:
   cY3c6eUAAAAJ:_kc_bZDykSQC:
     citations: 0
     title: Supervised Reinforcement Learning for the Coordination of Distributed Energy Resources
-    year: '2026'
+    year: '2027'
   cY3c6eUAAAAJ:d1gkVwhDpl0C:
     citations: 7
     title: Real-time Optimization Scheduling Strategy for Aggregated Electric Vehicles Supported by Artificial Intelligence Technology
@@ -98,11 +98,11 @@ papers:
     title: Independent aggregators securing end user Wasserstein distributionally robust flexibility through bilevel incentives
     year: '2026'
   cY3c6eUAAAAJ:roLk4NBRz8UC:
-    citations: 2
+    citations: 1
     title: Exploiting Data Centres and Local Energy Communities Synergies for Market Participation
     year: '2024'
   cY3c6eUAAAAJ:u-x6o8ySG0sC:
-    citations: 90
+    citations: 93
     title: LSTM-based energy management for electric vehicle charging in commercial-building prosumers
     year: '2021'
   cY3c6eUAAAAJ:u5HHmVD_uO8C:
