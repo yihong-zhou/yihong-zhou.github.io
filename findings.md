@@ -486,3 +486,48 @@ Audit focused on homepage and adjacent conversion pages:
 - The representative-work heading now opts out of the generic 43rem heading cap and stays on one line at desktop widths; responsive wrapping remains enabled below 992px.
 
 ---
+
+# Findings: Scholar, CV, Website, and Passau Panel Update (2026-08-04)
+
+## Initial Audit
+- CV sources are `assets/cv/Yihong-Zhou-CV/main.tex` and `Chinese.tex`; published PDFs live under `assets/pdf/`.
+- Website content is distributed across `_bibliography/papers.bib`, `_pages/about.md`, `_pages/publications.md`, `_pages/talks.md`, `_pages/news.md`, and `_pages/cv.md`.
+- No repository-level `AGENTS.md` applies to this workspace.
+- Direct web extraction of the supplied Google Scholar profile returned an internal error, and generic search results matched unrelated authors; Scholar data must be captured from the supplied profile in the browser rather than inferred from search.
+- The University of Passau workshop page is publicly accessible and will be used as the primary event source.
+
+## Google Scholar Snapshot (2026-08-04)
+- Profile: Yihong Zhou (周羿宏), Postdoctoral Research Associate, University of Oxford.
+- Metrics: 357 citations (353 since 2021), h-index 9, i10-index 9.
+- Scholar shows 12 publicly accessible articles.
+- The first 20 records include three future-dated/currently updated journal records that must be checked against local data: `Supervised reinforcement learning for the coordination of distributed energy resources` (Electric Power Systems Research 263, 113743, listed as 2027), `Optimal reliability thresholds for stochastic flexibility aggregators in European reserve markets` (listed as Elsevier, 2027), and the already-present 2026 journal publications.
+- Citation-sensitive homepage/CV text currently showing 343 is outdated and should become 357 where a live citation total is intentionally displayed.
+- Scholar contains 29 records after expansion. New or materially updated 2026 records not yet known to be local include: `Decision-Focused Scenario Generation and Selection for Efficient and Robust Grid Dispatch` (arXiv:2607.05830), `JAX-Based Batched AC Power Flow for GPU Acceleration and AI Ecosystem Integration` (arXiv:2605.14103), `GradMAP: Gradient-Based Multi-Agent Proximal Learning for Grid-Edge Flexibility` (arXiv:2604.24549), `Independent aggregators securing end user Wasserstein distributionally robust flexibility through bilevel incentives` (Applied Energy 409, 127484), and `Multiscale Grid Intelligence to Fight Artificial Intelligence Data Center Grid Defection` (IEEE Energy Sustainability Magazine 2(1), 29-45).
+- Scholar has duplicate venue-stage records for `Optimal reliability thresholds...` and `Independent aggregators...`; local data should keep one authoritative journal record per work rather than duplicate Scholar entries.
+
+## University of Passau Workshop
+- Official title: `The Internet meets the Electricity Grid: Technical Standards and Societal Challenges`.
+- Dates/location: 16-17 July 2026, IT Centre, University of Passau, Passau, Germany.
+- Verified role: panel speaker in `Internetification of the Electric Grid` (Panel & Talks #1), 11:00-12:30 on 16 July 2026, moderated by Hermann de Meer.
+- The official programme lists Yihong Zhou (University of Oxford, UK) among the panel speakers and specifies four short talks followed by a 30-minute discussion.
+
+## Local Content Audit (initial)
+- Both CVs still display `343` Google Scholar citations; this must be updated to 357.
+- The English CV already includes the main 2026 Scholar additions in journal/preprint sections, including decision-focused scenario generation, GradMAP, JAX power flow, Applied Energy, EPSR, and Energy Sustainability Magazine.
+- At least two journal metadata lines need synchronization with Scholar: supervised RL is now listed as `Electric Power Systems Research 263, 113743, 2027` rather than only accepted in 2026; the multiscale grid-intelligence article is listed by Scholar as IEEE Energy Sustainability Magazine 2(1), 29-45, 2026 rather than 2025.
+- `_bibliography/papers.bib` already has entries for the recent 2026/2027 works, so the primary publication task is metadata/citation reconciliation rather than adding every Scholar record from scratch.
+- `_pages/cv.md` says `Updated July 2026` and should be changed to August 2026.
+- The Passau event is absent from the English/Chinese CV activity lists and from Talks.
+
+## Detailed Reconciliation
+- `_data/citations.yml` is dated 2026-07-11. Scholar changes include: LSTM energy management 90 to 93; robust load forecasting 86 to 89; flexibility prediction 37 to 38; LLM home energy management 23 to 29; AI-focused HPC data centres 13 to 15; ISGT Europe synergies 2 to 1. Other displayed counts remain unchanged.
+- The recent Scholar additions already have matching bibliography entries and preview images, including GradMAP, JAX power flow, decision-focused scenarios, Applied Energy, supervised RL, and the EPSR reliability paper.
+- The Chinese CV mirrors the English publication inventory but also has stale supervised-RL and multiscale journal metadata plus the 343 citation total.
+- News entries are individual Markdown files under `_news/`; a new Passau announcement should follow that existing structure.
+- Official publication metadata for supervised RL: Electric Power Systems Research, volume 263, article 113743, DOI `10.1016/j.epsr.2026.113743`; ScienceDirect assigns February 2027 while Oxford ORA records online publication on 14 July 2026. Use the journal's volume/year display (2027) while retaining the DOI and arXiv link.
+- The existing CV build directory contains a compiled English PDF but no documented Makefile; compilation commands must be determined from the available TeX toolchain.
+- Both CV sources compile successfully to three pages. The first Chinese build exposed a 29.5 pt overfull line in the newly expanded supervised-RL citation; abbreviating the visible DOI label resolves the new layout risk while preserving the full clickable DOI target.
+- The corrected Chinese build removes that 29.5 pt overflow. Only two pre-existing approximately 2 pt overfull lines and one underfull paragraph remain; these are small enough to assess visually during page QA.
+- The production Jekyll build succeeds. Generated HTML contains the Passau panel on Talks and News, the updated EPSR DOI on Publications, and the August 2026 CV page description; all three published PDF assets are present in `_site`.
+- Rendered Talks QA confirms the new Passau item appears first under 2026 with a clean hierarchy, readable metadata, working-labelled Workshop/Programme actions, and no visible desktop overflow.
+- Rendered Publications QA confirms the updated 2027 EPSR entry is first, carries volume 263/article 113743 and the DOI action, while all six reconciled Scholar citation badges show the intended current counts.

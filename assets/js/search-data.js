@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "Academic CV · Updated July 2026.",
+          description: "Academic CV · Updated August 2026.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -99,6 +99,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-our-preprint-decision-focused-scenario-generation-and-selection-for-efficient-and-robust-grid-dispatch-is-now-available-on-arxiv",
           title: 'Our preprint Decision-Focused Scenario Generation and Selection for Efficient and Robust Grid Dispatch...',
+          description: "",
+          section: "News",},{id: "news-i-joined-the-internetification-of-the-electric-grid-panel-at-the-irtf-sustain-rg-workshop-the-internet-meets-the-electricity-grid-technical-standards-and-societal-challenges-hosted-by-the-university-of-passau",
+          title: 'I joined the Internetification of the Electric Grid panel at the IRTF SUSTAIN...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',

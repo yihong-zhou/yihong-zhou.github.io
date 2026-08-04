@@ -385,3 +385,33 @@ Reduce homepage content density and reorganize position and evidence metrics.
 - Expanded the representative-work heading to the full content width in both languages, keeping it single-line on desktop while preserving responsive wrapping; build passes.
 
 ---
+
+## Session Update: Scholar, CV, Website, and Passau Panel Update (2026-08-04)
+
+### Objective
+Synchronize the latest Scholar record and Passau panel participation across the website and bilingual CV.
+
+### Actions Started
+- Read the required planning and PDF workflows.
+- Located the CV sources, published PDFs, bibliography, and relevant website pages.
+- Attempted direct Scholar extraction; rejected unrelated search matches and switched to browser-based inspection of the exact supplied profile.
+- Confirmed the Passau event page is available for detailed extraction.
+- Opened the exact Scholar profile in the browser and captured current metrics plus the first 20 article records.
+- Expanded Scholar to all 29 records and captured titles, venues, citations, and years in one structured read.
+- Verified the Passau panel title, date, venue, session name, moderator, and panel-speaker role from the official programme.
+- Audited the current English CV, Chinese CV, bibliography, citation data, Talks, and CV page; identified stale citation totals, journal metadata, update date, and the missing Passau panel.
+- Completed title-by-title reconciliation: no new bibliography entry is required, but six citation counts, two journal metadata records, both CVs, the CV update date, Talks, and News need edits.
+- Confirmed supervised-RL DOI, volume, article number, and publication schedule from ScienceDirect and Oxford ORA.
+- Updated citation data, recent journal metadata, English and Chinese CV sources, CV page date, Talks, and a new Passau news item.
+- Static checks show no remaining 343 citation total; the nested CV source repository correctly reports only `main.tex` and `Chinese.tex` as modified.
+- Confirmed local availability of `latexmk`, XeLaTeX, pdfLaTeX, Poppler `pdfinfo`, and `pdftoppm` for full PDF build and visual QA.
+- Compiled the updated English and Chinese CV sources successfully; both outputs are three pages. A new Chinese overfull-line warning in the supervised-RL entry was identified and corrected before final publication.
+- Recompiled Chinese CV after shortening the visible DOI label; the new publication entry no longer overflows.
+- Published the rebuilt English, legacy-English, and Chinese PDF assets to `assets/pdf/`.
+- Rendered and visually inspected all six CV pages. Both versions are clean: no clipping, collision, malformed glyphs, or unintended blank page; the new journal metadata and Passau panel item are legible.
+- Completed a successful Docker/Jekyll production build; only the repository's existing Sass and notebook deprecation warnings remain.
+- Confirmed the local Talks preview loads successfully for final rendered-page review.
+- Reviewed the rendered Talks DOM and desktop screenshot; the Passau panel entry is positioned and styled correctly.
+- Reviewed the rendered Publications page: the latest journal metadata, preview image, DOI, Scholar citation counts, and year grouping all resolve correctly.
+- Final source, generated-page, PDF-asset, and whitespace checks pass.
+- An optional final `pdftotext` assertion could not run because that binary is absent; this does not affect the already completed PDF rendering and six-page visual inspection.
