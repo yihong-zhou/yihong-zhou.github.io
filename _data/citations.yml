@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-07'
+  last_updated: '2026-08-12'
 papers:
   cY3c6eUAAAAJ:0EnyYjriUFMC:
     citations: 1
@@ -90,7 +90,7 @@ papers:
     title: Real-time Optimization Scheduling Strategy for Aggregated Electric Vehicles Supported by Artificial Intelligence Technology
     year: '2020'
   cY3c6eUAAAAJ:eQOLeE2rZwMC:
-    citations: 28
+    citations: 29
     title: Aggregated feasible active power region for distributed energy resources with a distributionally robust joint probabilistic guarantee
     year: '2024'
   cY3c6eUAAAAJ:kNdYIx-mwKoC:
