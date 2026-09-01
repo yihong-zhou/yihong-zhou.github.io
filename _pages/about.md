@@ -115,8 +115,8 @@ latest_posts:
           <h2>PhD in grid flexibility, MSc in AI, now building at the interface of both.</h2>
         </div>
         <div class="star-actions">
-          <a href="/assets/pdf/Yihong_Zhou_CV_en.pdf" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> English CV</a>
-          <a href="/assets/pdf/Yihong_Zhou_CV_zh.pdf" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> 中文 CV</a>
+          <a href="/assets/pdf/Yihong_Zhou_CV_en.pdf?v=20260901" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> English CV</a>
+          <a href="/assets/pdf/Yihong_Zhou_CV_zh.pdf?v=20260901" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> 中文 CV</a>
         </div>
       </section>
     </section>
@@ -194,8 +194,8 @@ latest_posts:
           <h2>博士研究电网灵活性，硕士训练人工智能，现在连接二者。</h2>
         </div>
         <div class="star-actions">
-          <a href="/assets/pdf/Yihong_Zhou_CV_en.pdf" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> English CV</a>
-          <a href="/assets/pdf/Yihong_Zhou_CV_zh.pdf" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> 中文 CV</a>
+          <a href="/assets/pdf/Yihong_Zhou_CV_en.pdf?v=20260901" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> English CV</a>
+          <a href="/assets/pdf/Yihong_Zhou_CV_zh.pdf?v=20260901" class="btn btn-sm z-depth-0" role="button"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> 中文 CV</a>
         </div>
       </section>
     </section>

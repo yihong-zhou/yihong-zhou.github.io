@@ -5,7 +5,7 @@ title: CV
 nav: true
 nav_order: 5
 eyebrow: Curriculum vitae
-description: Academic CV · Updated August 2026.
+description: Academic CV · Updated September 2026.
 ---
 
 <div class="cv-summary" aria-label="CV summary">
@@ -25,14 +25,14 @@ description: Academic CV · Updated August 2026.
   <div class="language-panels cv-language-panels">
     <section class="lang-panel lang-panel-en" lang="en">
       <div class="cv-page-toolbar">
-        <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_en.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Open PDF</a>
-        <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_en.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
+        <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_en.pdf?v=20260901" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> Open PDF</a>
+        <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_en.pdf?v=20260901" download><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
         <a class="btn btn-sm z-depth-0" href="https://github.com/yihong-zhou/Yihong-Zhou-CV/blob/main/main.tex" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code" aria-hidden="true"></i> TeX Source</a>
       </div>
       <p class="cv-mobile-note">Open or download the PDF for the best reading experience on a smaller screen.</p>
       <iframe
         class="cv-page-embed"
-        src="/assets/pdf/Yihong_Zhou_CV_en.pdf#view=FitH"
+        src="/assets/pdf/Yihong_Zhou_CV_en.pdf?v=20260901#view=FitH"
         title="Yihong Zhou English CV"
         loading="lazy"
       ></iframe>
@@ -40,14 +40,14 @@ description: Academic CV · Updated August 2026.
 
     <section class="lang-panel lang-panel-zh" lang="zh-Hans">
       <div class="cv-page-toolbar">
-        <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_zh.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> 打开 PDF</a>
-        <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_zh.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> 下载</a>
+        <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_zh.pdf?v=20260901" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i> 打开 PDF</a>
+        <a class="btn btn-sm z-depth-0" href="/assets/pdf/Yihong_Zhou_CV_zh.pdf?v=20260901" download><i class="fa-solid fa-download" aria-hidden="true"></i> 下载</a>
         <a class="btn btn-sm z-depth-0" href="https://github.com/yihong-zhou/Yihong-Zhou-CV/blob/main/Chinese.tex" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code" aria-hidden="true"></i> TeX 源码</a>
       </div>
       <p class="cv-mobile-note">在小屏幕上，请打开或下载 PDF 以获得最佳阅读体验。</p>
       <iframe
         class="cv-page-embed"
-        src="/assets/pdf/Yihong_Zhou_CV_zh.pdf#view=FitH"
+        src="/assets/pdf/Yihong_Zhou_CV_zh.pdf?v=20260901#view=FitH"
         title="Yihong Zhou Chinese CV"
         loading="lazy"
       ></iframe>
